@@ -12,7 +12,7 @@
   const themeToggle = document.getElementById('themeToggle');
   const printBtns   = [document.getElementById('printBtn'), document.getElementById('printBtnFooter')];
   const filterBtns  = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  const projectCards = document.querySelectorAll('.project-row, .project-card');
 
   // ── Theme ─────────────────────────────────────────────────
   const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
@@ -136,13 +136,15 @@
     modalHead.innerHTML = '';
 
     const badges   = trigger.querySelector('.flagship-badges');
+    const rowCat   = trigger.querySelector('.project-row__cat');
     const cardTop  = trigger.querySelector('.card-top');
     const label    = trigger.querySelector('.card-label');
-    const title    = trigger.querySelector('h3');
+    const title    = trigger.querySelector('.project-row__title, h3');
     const subtitle = trigger.querySelector('.flagship-subtitle');
     const metrics  = trigger.querySelector('.card-metrics, .flagship-stats');
 
     if (badges)   modalHead.appendChild(badges.cloneNode(true));
+    if (rowCat)   modalHead.appendChild(rowCat.cloneNode(true));
     if (cardTop)  modalHead.appendChild(cardTop.cloneNode(true));
     if (label)    modalHead.appendChild(label.cloneNode(true));
     if (title) {
@@ -154,6 +156,12 @@
     if (metrics)  modalHead.appendChild(metrics.cloneNode(true));
 
     modalBody.innerHTML = source.innerHTML;
+
+    const premiumType = source.dataset.premium;
+    modal.classList.toggle('modal--premium', !!premiumType);
+    modal.classList.remove('modal--report', 'modal--llm');
+    if (premiumType === 'report') modal.classList.add('modal--report');
+    if (premiumType === 'llm') modal.classList.add('modal--llm');
 
     modalBody.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', closeModal, { once: true });
@@ -170,7 +178,7 @@
 
   function closeModal() {
     if (!modal) return;
-    modal.classList.remove('modal--open');
+    modal.classList.remove('modal--open', 'modal--premium', 'modal--report', 'modal--llm');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
     modalHead.innerHTML = '';

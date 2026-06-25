@@ -23,7 +23,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#summary" class="nav-link">Summary</a></li>
         <li><a href="#highlights" class="nav-link">Highlights</a></li>
-        <li><a href="#flagship" class="nav-link">Flagship</a></li>
+        <li><a href="#core-tasks" class="nav-link">Core Tasks</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#impact" class="nav-link">Impact</a></li>
@@ -45,32 +45,14 @@
       <h1 class="hero-title">
         <span class="hero-name">Mohammed<br />Like</span>
       </h1>
-      <p class="hero-role">Quantitative Research &amp; FinTech Development Intern</p>
+      <p class="hero-role">Quantitative Researcher and Developer Intern</p>
       <p class="hero-desc">
-        Two flagship systems anchor this internship — an <strong>institutional research report automation platform</strong>
+        Two core production systems anchor this internship — an <strong>institutional research report automation platform</strong>
         (2,370 stocks · 3,498 logos · SEBI-compliant PDFs in &lt;60s) and a <strong>RAG + LLM + MCP quant research engine</strong>
         powering natural-language strategy creation, vectorized backtesting, and client Pine Script delivery.
       </p>
-      <div class="hero-stats">
-        <div class="stat-pill">
-          <strong>2,370</strong>
-          <span>Stocks Automated</span>
-        </div>
-        <div class="stat-pill">
-          <strong>3,498</strong>
-          <span>Company Logos</span>
-        </div>
-        <div class="stat-pill">
-          <strong>212</strong>
-          <span>Indicators Tested</span>
-        </div>
-        <div class="stat-pill">
-          <strong>~60s</strong>
-          <span>Per Report PDF</span>
-        </div>
-      </div>
       <div class="hero-actions">
-        <a href="#flagship" class="btn btn-primary">Flagship Projects</a>
+        <a href="#core-tasks" class="btn btn-primary">Core Project Tasks</a>
         <a href="#projects" class="btn btn-outline">All 12 Projects</a>
       </div>
     </div>
@@ -93,7 +75,7 @@
       <div class="summary-card reveal">
         <p>
           During this internship at <strong>Stockwiz Technologies LLP</strong> (SEBI Registered Research Analyst · INH000013925),
-          I architected and shipped <strong>two flagship production systems</strong> that define the company's technical roadmap:
+          I architected and shipped <strong>two core production systems</strong> that define the company's technical roadmap:
           the <strong>Research Report Automation System</strong> (daily ops — 2,370 stocks, 3,498 logos, &lt;60s PDFs) and
           <strong>Quant Folio</strong> (strategic R&amp;D — RAG + LLM + MCP quant platform with VectorBT backtesting and 310+ client Pine pipeline).
         </p>
@@ -208,26 +190,26 @@
     </div>
   </section>
 
-  <!-- Flagship Projects -->
-  <section class="section section-flagship" id="flagship">
+  <!-- Core Project Tasks -->
+  <section class="section section-flagship" id="core-tasks">
     <div class="container">
       <div class="section-header">
         <span class="section-num">★</span>
         <div>
           <span class="section-tag">Primary Deliverables</span>
-          <h2>Flagship Systems</h2>
-          <p class="section-sub">The two core production systems — click a card to open the full architecture &amp; analysis.</p>
+          <h2>Core Project Tasks</h2>
+          <p class="section-sub">The two main production systems — click a card to open the full architecture &amp; analysis.</p>
         </div>
       </div>
 
       <div class="flagship-grid">
-      <!-- FLAGSHIP 1: Report Automation -->
-      <article class="flagship-card flagship-tile reveal" id="flagship-report">
-        <button type="button" class="tile-trigger" aria-label="View flagship details">
+      <!-- Core Task 1: Report Automation -->
+      <article class="flagship-card flagship-tile reveal" id="core-report">
+        <button type="button" class="tile-trigger" aria-label="View core task details">
         <div class="flagship-inner">
         <div class="flagship-header">
           <div class="flagship-badges">
-            <span class="badge badge-flagship">Flagship Project #1</span>
+            <span class="badge badge-flagship">Core Task #1</span>
             <span class="badge badge-prod">Production System</span>
             <span class="badge badge-sebi">SEBI Compliant</span>
           </div>
@@ -246,60 +228,126 @@
         <span class="tile-cta">View deep dive →</span>
         </div>
         </button>
-        <div class="modal-source" hidden>
-        <p class="flagship-desc">
-          This is the <strong>primary daily operations system</strong> for Stockwiz's research desk. It fully replaced a manual
-          ChatGPT → copy-paste → format → export workflow. Analysts now drag-and-drop a post-market signal CSV, watch live
-          SSE progress per stock, and download SEBI-compliant PDFs ready for Discord distribution — with zero manual formatting.
-        </p>
+        <div class="modal-source modal-source--premium" hidden data-premium="report">
+        <div class="premium-modal">
+          <p class="premium-lead">
+            Primary daily-ops system for Stockwiz research — replaced manual ChatGPT → format → PDF with
+            <strong>one-click batch generation</strong> across 2,370 instruments after market close.
+          </p>
 
-        <div class="flagship-arch">
-          <p class="arch-label">System Architecture</p>
-          <pre class="arch-diagram">CSV / Excel Signal List
-        │
-        ▼
-┌───────────────────────────────────────┐
-│  REACT 18 + VITE DASHBOARD  :6173     │
-│  Drag-drop · Manual add · SSE stream  │
-└───────────────────┬───────────────────┘
-                    │ POST /generate/stream
-                    ▼
-┌───────────────────────────────────────┐
-│  FASTAPI BACKEND  :9000               │
-│  yfinance · Screener profiles         │
-│  3,498 logos · NSE lot sizes          │
-│  Vite build → Playwright PDF export   │
-└───────────────────┬───────────────────┘
-                    ▼
-        SEBI-compliant 8-page PDF output</pre>
-        </div>
+          <section class="premium-block">
+            <h4 class="premium-heading"><span class="premium-heading__num">01</span> End-to-End Pipeline</h4>
+            <div class="arch-flow arch-flow--report">
+              <div class="arch-node arch-node--input">
+                <span class="arch-node__tag">Input</span>
+                <strong>Signal Intake</strong>
+                <p>Post-market CSV / Excel drag-drop or manual symbol add</p>
+                <div class="arch-node__meta">Equity · F&amp;O · Index derivatives</div>
+              </div>
+              <div class="arch-arrow" aria-hidden="true"><span>SSE</span></div>
+              <div class="arch-node arch-node--ui">
+                <span class="arch-node__tag">L1 · :6173</span>
+                <strong>React 18 + Vite Dashboard</strong>
+                <p>Live progress stream · per-stock status · download queue</p>
+                <div class="arch-pills"><span>Drag-drop</span><span>SSE</span><span>Batch queue</span></div>
+              </div>
+              <div class="arch-arrow arch-arrow--down" aria-hidden="true"><span>POST /generate/stream</span></div>
+              <div class="arch-node arch-node--api">
+                <span class="arch-node__tag">L2 · :9000</span>
+                <strong>FastAPI Orchestrator</strong>
+                <p>Per-instrument pipeline: fetch → reason → render → export</p>
+                <div class="arch-pills"><span>Async</span><span>Pydantic</span><span>Playwright</span></div>
+              </div>
+              <div class="arch-arrow arch-arrow--split" aria-hidden="true"></div>
+              <div class="arch-flow__branch">
+                <div class="arch-node arch-node--data">
+                  <span class="arch-node__tag">Data Layer</span>
+                  <strong>Asset &amp; Market DB</strong>
+                  <ul class="arch-node__list">
+                    <li><code>company_profiles.csv</code> — 2,370 rows</li>
+                    <li>PNG logo library — 3,498 files</li>
+                    <li>yfinance live OHLC + fundamentals</li>
+                    <li>NSE F&amp;O lot-size maps</li>
+                  </ul>
+                </div>
+                <div class="arch-node arch-node--engine">
+                  <span class="arch-node__tag">PDF Engine</span>
+                  <strong>Render → Export</strong>
+                  <ul class="arch-node__list">
+                    <li>Vite production build per stock</li>
+                    <li>Headless Chromium (Playwright)</li>
+                    <li>SEBI disclaimers + branding</li>
+                    <li>8-page institutional layout</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="arch-arrow arch-arrow--down" aria-hidden="true"><span>output</span></div>
+              <div class="arch-node arch-node--output">
+                <span class="arch-node__tag">Deliverable</span>
+                <strong>SEBI-Compliant PDF</strong>
+                <p>Branded research report ready for Discord / client distribution</p>
+              </div>
+            </div>
+          </section>
 
-        <div class="flagship-analysis">
-          <p class="arch-label">In-Depth Analysis</p>
-          <ul>
-            <li><strong>Problem:</strong> Each stock required 30–45 min of manual ChatGPT drafting, HTML formatting, and PDF export — unsustainable at 2,370+ instrument scale.</li>
-            <li><strong>Solution:</strong> End-to-end orchestration — live market data (yfinance), templated fundamental/technical reasoning, automated React render, headless Chromium PDF via Playwright.</li>
-            <li><strong>Data layer:</strong> <code>company_profiles.csv</code> (2,370 rows from Screener), local PNG logo library (3,498 files), NSE F&amp;O lot-size maps.</li>
-            <li><strong>Instrument support:</strong> Equity cash, index/equity futures, calls &amp; puts with smart symbol parsing (e.g. <code>BANKNIFTY 30 JUN 54800 PUT</code>).</li>
-            <li><strong>Business outcome:</strong> Batch generation after market close with consistent Stockwiz branding, live progress tracking, and one-click downloads.</li>
-          </ul>
-        </div>
-        <div class="card-links flagship-links">
-          <a href="https://github.com/MohammedLike/Research-Report-Automation" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub — Production Repo</a>
-          <a href="https://github.com/MohammedLike/Report-Automation" class="link-chip" target="_blank" rel="noopener">GitHub — Stryke Scaffold</a>
-          <a href="https://www.screener.in" class="link-chip" target="_blank" rel="noopener">Data — Screener.in</a>
-          <a href="https://www.stockwiz.in" class="link-chip" target="_blank" rel="noopener">Stockwiz.in</a>
+          <section class="premium-block">
+            <h4 class="premium-heading"><span class="premium-heading__num">02</span> 8-Page Report Composition</h4>
+            <div class="page-grid">
+              <div class="page-card"><span>P1</span><strong>Cover &amp; Rating</strong><p>Stockwiz branding · BUY/SELL/HOLD</p></div>
+              <div class="page-card"><span>P2</span><strong>Price Chart</strong><p>Technical overlay · key levels</p></div>
+              <div class="page-card"><span>P3</span><strong>Fundamental Thesis</strong><p>AI-drafted reasoning block</p></div>
+              <div class="page-card"><span>P4</span><strong>Financials</strong><p>P&amp;L · balance sheet highlights</p></div>
+              <div class="page-card"><span>P5</span><strong>Valuation</strong><p>Peer comparison · multiples</p></div>
+              <div class="page-card"><span>P6</span><strong>Market Snapshot</strong><p>Sector context · index correlation</p></div>
+              <div class="page-card"><span>P7</span><strong>Risk &amp; Catalysts</strong><p>Upside/downside drivers</p></div>
+              <div class="page-card"><span>P8</span><strong>SEBI Compliance</strong><p>Disclaimers · analyst certification</p></div>
+            </div>
+          </section>
+
+          <section class="premium-block premium-block--grid">
+            <div>
+              <h4 class="premium-heading"><span class="premium-heading__num">03</span> Technology Stack</h4>
+              <div class="tech-matrix">
+                <div class="tech-row"><span class="tech-row__label">Frontend</span><div class="tech-row__items"><span>React 18</span><span>Vite</span><span>SSE Client</span></div></div>
+                <div class="tech-row"><span class="tech-row__label">Backend</span><div class="tech-row__items"><span>FastAPI</span><span>Uvicorn</span><span>Pydantic</span><span>APScheduler</span></div></div>
+                <div class="tech-row"><span class="tech-row__label">Data</span><div class="tech-row__items"><span>yfinance</span><span>Screener CSV</span><span>Pandas</span></div></div>
+                <div class="tech-row"><span class="tech-row__label">Export</span><div class="tech-row__items"><span>Playwright</span><span>Chromium</span><span>Jinja2 templates</span></div></div>
+              </div>
+            </div>
+            <div>
+              <h4 class="premium-heading"><span class="premium-heading__num">04</span> F&amp;O Instrument Parser</h4>
+              <div class="code-showcase">
+                <code>BANKNIFTY 30 JUN 54800 PUT</code>
+                <code>RELIANCE 28 AUG FUT</code>
+                <code>TCS · Equity Cash</code>
+              </div>
+              <p class="premium-note">Smart symbol resolver handles index/equity futures, calls, puts, and cash equities with NSE lot-size lookup.</p>
+            </div>
+          </section>
+
+          <section class="premium-block">
+            <h4 class="premium-heading"><span class="premium-heading__num">05</span> Business Impact</h4>
+            <div class="impact-rows">
+              <div class="impact-row"><span class="impact-row__label">Before</span><p>30–45 min manual ChatGPT + HTML + PDF per stock</p></div>
+              <div class="impact-row impact-row--highlight"><span class="impact-row__label">After</span><p>&lt;60s automated pipeline · ~97% time reduction · batch post-market runs</p></div>
+              <div class="impact-row"><span class="impact-row__label">Scale</span><p>2,370 instruments · 3,498 logos · zero copy-paste formatting</p></div>
+            </div>
+          </section>
+
+          <div class="card-links flagship-links">
+            <a href="https://github.com/MohammedLike/Research-Report-Automation" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
         </div>
       </article>
 
-      <!-- FLAGSHIP 2: AI LLM MCP -->
-      <article class="flagship-card flagship-tile reveal" id="flagship-ai">
-        <button type="button" class="tile-trigger" aria-label="View flagship details">
+      <!-- Core Task 2: AI LLM MCP -->
+      <article class="flagship-card flagship-tile reveal" id="core-ai">
+        <button type="button" class="tile-trigger" aria-label="View core task details">
         <div class="flagship-inner">
         <div class="flagship-header">
           <div class="flagship-badges">
-            <span class="badge badge-flagship">Flagship Project #2</span>
+            <span class="badge badge-flagship">Core Task #2</span>
             <span class="badge badge-ai">AI / RAG / MCP</span>
             <span class="badge badge-rd">Strategic R&amp;D Platform</span>
           </div>
@@ -318,45 +366,118 @@
         <span class="tile-cta">View deep dive →</span>
         </div>
         </button>
-        <div class="modal-source" hidden>
-        <p class="flagship-desc">
-          The company's <strong>next-generation quant platform</strong> — not a prototype, but a multi-layer research OS integrating
-          local LLMs (Ollama / DeepSeek-R1), RAG over Qdrant, MCP tool servers for agentic workflows, VectorBT vectorized backtesting,
-          TimescaleDB hypertables for OHLCV/options chain, and a client intake pipeline that converts Excel strategy requests into
-          TradingView Pine Script via LLM generation with full audit history.
-        </p>
+        <div class="modal-source modal-source--premium" hidden data-premium="llm">
+        <div class="premium-modal premium-modal--llm">
+          <p class="premium-lead">
+            Next-generation <strong>AI quant research OS</strong> — local LLMs, RAG over 5 Qdrant collections,
+            MCP agent tools, VectorBT backtesting, and a 310+ client Pine Script generation pipeline.
+          </p>
 
-        <div class="flagship-arch">
-          <p class="arch-label">System Architecture (5-Layer Stack)</p>
-          <pre class="arch-diagram">L5  PRESENTATION — React/Vite UI · Vanilla JS · Lightweight Charts
-         │
-L4  API GATEWAY — FastAPI · MCP Router · Pydantic · AsyncPG
-         │
-    ┌────┴────┐
-L3a COGNITIVE   L3b ANALYTICS
-    Ollama/RAG      VectorBT · TA-Lib
-    Qdrant 5 coll.  Rule Compiler · Greeks
-         │
-L2  CACHE — Redis 7 · Parquet local cache · yfinance fallback
-         │
-L1  STORAGE — TimescaleDB (ohlcv · ticks · options_chain · strategies)</pre>
-        </div>
+          <section class="premium-block">
+            <h4 class="premium-heading"><span class="premium-heading__num">01</span> 5-Layer Platform Architecture</h4>
+            <div class="layer-stack">
+              <div class="layer-card layer-card--l5">
+                <div class="layer-card__head"><span>L5</span><strong>Presentation</strong></div>
+                <p>React/Vite UI · Vanilla JS dashboards · Lightweight Charts · Strategy builder views</p>
+              </div>
+              <div class="layer-connector" aria-hidden="true"></div>
+              <div class="layer-card layer-card--l4">
+                <div class="layer-card__head"><span>L4</span><strong>API Gateway</strong></div>
+                <p>FastAPI · MCP Router · Pydantic validation · AsyncPG · JWT auth · WebSocket streams</p>
+              </div>
+              <div class="layer-connector layer-connector--fork" aria-hidden="true"></div>
+              <div class="layer-split">
+                <div class="layer-card layer-card--l3a">
+                  <div class="layer-card__head"><span>L3a</span><strong>Cognitive</strong></div>
+                  <p>Ollama / DeepSeek-R1 · LangChain · RAG retrieval · BGE-small 384-dim embeddings</p>
+                  <div class="arch-pills"><span>Qdrant ×5</span><span>MCP Server</span><span>Agents</span></div>
+                </div>
+                <div class="layer-card layer-card--l3b">
+                  <div class="layer-card__head"><span>L3b</span><strong>Analytics</strong></div>
+                  <p>VectorBT vectorized sim · TA-Lib (112 indicators) · Rule compiler · Black-Scholes Greeks</p>
+                  <div class="arch-pills"><span>Sharpe</span><span>Sortino</span><span>Max DD</span></div>
+                </div>
+              </div>
+              <div class="layer-connector" aria-hidden="true"></div>
+              <div class="layer-card layer-card--l2">
+                <div class="layer-card__head"><span>L2</span><strong>Cache Layer</strong></div>
+                <p>Redis 7 sub-ms backtest cache · Parquet local OHLCV · yfinance fallback</p>
+              </div>
+              <div class="layer-connector" aria-hidden="true"></div>
+              <div class="layer-card layer-card--l1">
+                <div class="layer-card__head"><span>L1</span><strong>Storage</strong></div>
+                <p>TimescaleDB hypertables — OHLCV · tick data · options_chain · strategies (~1,800 records)</p>
+              </div>
+            </div>
+          </section>
 
-        <div class="flagship-analysis">
-          <p class="arch-label">In-Depth Analysis</p>
-          <ul>
-            <li><strong>Cognitive layer:</strong> Ollama-hosted LLMs with Qdrant RAG (BGE embeddings) for strategy hypothesis synthesis; MCP server exposes <code>get_ohlcv</code>, <code>run_backtest</code>, <code>search_similar</code> tools to AI agents.</li>
-            <li><strong>Analytics engine:</strong> VectorBT-powered vectorized simulation with Sharpe, Sortino, CAGR, max drawdown; TA-Lib indicator catalog (112 indicators in production DB); options Greeks via Black-Scholes.</li>
-            <li><strong>Data infrastructure:</strong> ~1,800 strategy records ingested (Streak, Pine scripts, indicators, backtests, OHLCV, options chain); 5 semantic Qdrant collections; Redis sub-ms backtest cache.</li>
-            <li><strong>Client pipeline:</strong> 310+ client strategy requests from Excel → PostgreSQL → LLM Pine generation → human review workflow with full generation history.</li>
-            <li><strong>Phase 1 companion:</strong> AI Strategy Builder (No-Code) delivers Strategy DSL parser/validator/compiler + semantic search — foundation for Phase 2 LLM synthesis.</li>
-          </ul>
-        </div>
-        <div class="card-links flagship-links">
-          <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub — Quant Folio (LLM + MCP)</a>
-          <a href="https://github.com/MohammedLike/No-Code-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">GitHub — AI Strategy Builder</a>
-          <a href="https://qdrant.tech" class="link-chip" target="_blank" rel="noopener">Vector DB — Qdrant</a>
-          <a href="https://ollama.com" class="link-chip" target="_blank" rel="noopener">LLM — Ollama</a>
+          <section class="premium-block">
+            <h4 class="premium-heading"><span class="premium-heading__num">02</span> MCP Agent Tool Server</h4>
+            <div class="mcp-grid">
+              <div class="mcp-tool"><code>get_ohlcv</code><p>Fetch OHLCV from TimescaleDB or cache</p></div>
+              <div class="mcp-tool"><code>run_backtest</code><p>VectorBT simulation with full metrics</p></div>
+              <div class="mcp-tool"><code>search_similar</code><p>Cross-collection Qdrant semantic search</p></div>
+              <div class="mcp-tool"><code>compile_strategy</code><p>DSL parser → validator → compiler</p></div>
+              <div class="mcp-tool"><code>generate_pine</code><p>LLM → TradingView Pine Script output</p></div>
+              <div class="mcp-tool"><code>get_greeks</code><p>Options chain Greeks via py-vollib</p></div>
+            </div>
+          </section>
+
+          <section class="premium-block premium-block--grid">
+            <div>
+              <h4 class="premium-heading"><span class="premium-heading__num">03</span> RAG Vector Collections</h4>
+              <div class="rag-table">
+                <div class="rag-row rag-row--head"><span>Collection</span><span>Content</span><span>Records</span></div>
+                <div class="rag-row"><span>strategies</span><span>Streak + internal strategy specs</span><span>~600</span></div>
+                <div class="rag-row"><span>pine_scripts</span><span>TradingView Pine code corpus</span><span>~400</span></div>
+                <div class="rag-row"><span>indicators</span><span>TA-Lib + custom indicator docs</span><span>212</span></div>
+                <div class="rag-row"><span>backtests</span><span>Historical simulation results</span><span>~500</span></div>
+                <div class="rag-row"><span>market_intel</span><span>Research notes + sector reports</span><span>~100</span></div>
+              </div>
+            </div>
+            <div>
+              <h4 class="premium-heading"><span class="premium-heading__num">04</span> Docker Stack (7 Services)</h4>
+              <div class="docker-grid">
+                <span class="docker-svc">postgres</span>
+                <span class="docker-svc">timescaledb</span>
+                <span class="docker-svc">redis</span>
+                <span class="docker-svc">qdrant</span>
+                <span class="docker-svc">ollama</span>
+                <span class="docker-svc">api</span>
+                <span class="docker-svc">ui</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="premium-block">
+            <h4 class="premium-heading"><span class="premium-heading__num">05</span> Client Pine Script Pipeline</h4>
+            <div class="arch-flow arch-flow--horizontal">
+              <div class="arch-node arch-node--compact"><strong>Excel Intake</strong><p>310+ client requests</p></div>
+              <div class="arch-arrow arch-arrow--h" aria-hidden="true"></div>
+              <div class="arch-node arch-node--compact"><strong>PostgreSQL</strong><p>Request queue + audit</p></div>
+              <div class="arch-arrow arch-arrow--h" aria-hidden="true"></div>
+              <div class="arch-node arch-node--compact"><strong>Ollama LLM</strong><p>Pine generation</p></div>
+              <div class="arch-arrow arch-arrow--h" aria-hidden="true"></div>
+              <div class="arch-node arch-node--compact"><strong>Human Review</strong><p>QA + delivery</p></div>
+              <div class="arch-arrow arch-arrow--h" aria-hidden="true"></div>
+              <div class="arch-node arch-node--compact arch-node--output"><strong>TradingView</strong><p>Client deployment</p></div>
+            </div>
+          </section>
+
+          <section class="premium-block">
+            <h4 class="premium-heading"><span class="premium-heading__num">06</span> Natural-Language Strategy Flow</h4>
+            <div class="nl-flow">
+              <div class="nl-step"><span>1</span><p>User describes strategy in plain English</p></div>
+              <div class="nl-step"><span>2</span><p>RAG retrieves similar strategies + indicators from Qdrant</p></div>
+              <div class="nl-step"><span>3</span><p>LLM synthesizes hypothesis via MCP tool calls</p></div>
+              <div class="nl-step"><span>4</span><p>VectorBT runs vectorized backtest with Redis cache</p></div>
+              <div class="nl-step"><span>5</span><p>Sharpe · CAGR · drawdown returned to UI with charts</p></div>
+            </div>
+          </section>
+
+          <div class="card-links flagship-links">
+            <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
         </div>
       </article>
@@ -371,13 +492,13 @@ L1  STORAGE — TimescaleDB (ohlcv · ticks · options_chain · strategies)</pre
         <div>
           <span class="section-tag">Deliverables</span>
           <h2>Projects &amp; Work Areas</h2>
-          <p class="section-sub">12 major contributions — click any card to view details, architecture &amp; links.</p>
+          <p class="section-sub">12 major contributions — click any row to view full details &amp; architecture.</p>
         </div>
       </div>
 
       <div class="filter-bar reveal" id="filterBar">
         <button class="filter-btn active" data-filter="all" type="button">All</button>
-        <button class="filter-btn" data-filter="flagship" type="button">Flagship</button>
+        <button class="filter-btn" data-filter="flagship" type="button">Core</button>
         <button class="filter-btn" data-filter="quant" type="button">Quant Research</button>
         <button class="filter-btn" data-filter="trading" type="button">Trading</button>
         <button class="filter-btn" data-filter="ai" type="button">AI / ML</button>
@@ -386,24 +507,34 @@ L1  STORAGE — TimescaleDB (ohlcv · ticks · options_chain · strategies)</pre
         <button class="filter-btn" data-filter="research" type="button">Research</button>
       </div>
 
-      <div class="projects-grid" id="projectsGrid">
+      <div class="projects-list" id="projectsGrid">
 
         <!-- Project 1 -->
-        <article class="project-card project-tile reveal" data-category="quant">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">01</span><span class="card-tag tag-quant">Quant Research</span></div>
-            <p class="card-label">Sector Analysis Engine</p>
-            <h3>Nifty Pharma KPI Benchmarking &amp; Stock Prediction Engine</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>5</strong><span>Pharma Stocks</span></div>
-              <div class="metric-pill"><strong>13</strong><span>Analysis Modules</span></div>
-              <div class="metric-pill"><strong>48+</strong><span>KPI Metrics</span></div>
-              <div class="metric-pill"><strong>20</strong><span>DB Tables</span></div>
+        <article class="project-row project-tile reveal" data-category="quant">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">01</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--quant">QUANT · RESEARCH</span>
+                <h3 class="project-row__title">Nifty Pharma KPI Benchmarking &amp; Stock Prediction Engine</h3>
+                <p class="project-row__desc">Institutional sector analysis across 5 pharma stocks with automated scorecard ranking and PostgreSQL ingestion.</p>
+                <ul class="project-row__feats">
+                <li>5 stocks vs Nifty Pharma index EDA</li>
+                <li>13-section analysis pipeline · 20 DB tables</li>
+                <li>48+ KPI metrics · board-ready scorecards</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>Python</span>
+              <span>Jupyter</span>
+              <span>PostgreSQL</span>
+              <span>Seaborn</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -415,9 +546,7 @@ L1  STORAGE — TimescaleDB (ohlcv · ticks · options_chain · strategies)</pre
                 <div class="card-tech"><span>Python</span><span>Jupyter</span><span>PostgreSQL</span><span>Seaborn</span></div>
                 <p class="card-impact">Delivered board-ready sector scorecards used for investment screening decisions.</p>
                 <div class="card-links">
-                  <a href="https://github.com/MohammedLike/Stockwiz-Internship" class="link-chip" target="_blank" rel="noopener">GitHub</a>
-                  <a href="https://www.screener.in" class="link-chip" target="_blank" rel="noopener">Screener.in</a>
-                  <a href="https://www.nseindia.com/products-services/indices-nifty-pharma-index" class="link-chip" target="_blank" rel="noopener">Nifty Pharma</a>
+                  <a href="https://github.com/MohammedLike/Stockwiz-Internship" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -446,21 +575,31 @@ L1  STORAGE — TimescaleDB (ohlcv · ticks · options_chain · strategies)</pre
         </article>
 
         <!-- Project 2 -->
-        <article class="project-card project-tile reveal" data-category="trading">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">02</span><span class="card-tag tag-trading">Trading R&amp;D</span></div>
-            <p class="card-label">Indicator Quality Assurance Lab</p>
-            <h3>TA-Lib Indicator Testing &amp; Pine Script Strategy Lab</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>212</strong><span>Indicators</span></div>
-              <div class="metric-pill"><strong>20</strong><span>Golden Tests</span></div>
-              <div class="metric-pill"><strong>3</strong><span>Runners</span></div>
-              <div class="metric-pill"><strong>100%</strong><span>Pass Rate</span></div>
+        <article class="project-row project-tile reveal" data-category="trading">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">02</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--trading">TRADING · QA</span>
+                <h3 class="project-row__title">TA-Lib Indicator Testing &amp; Pine Script Strategy Lab</h3>
+                <p class="project-row__desc">Quality assurance lab validating 212 indicators with golden regression snapshots and Pine Script delivery.</p>
+                <ul class="project-row__feats">
+                <li>158 TA-Lib + 37 pandas + 17 SMC indicators</li>
+                <li>20 golden regression CI snapshots</li>
+                <li>TradingView Pine deployment pipeline</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>TA-Lib</span>
+              <span>Pine Script</span>
+              <span>pytest</span>
+              <span>Streamlit</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -472,8 +611,7 @@ L1  STORAGE — TimescaleDB (ohlcv · ticks · options_chain · strategies)</pre
                 <div class="card-tech"><span>TA-Lib</span><span>Pine Script</span><span>pytest</span><span>Streamlit</span></div>
                 <p class="card-impact">Became the quality gate for every indicator used in backtests and live strategies.</p>
                 <div class="card-links">
-                  <a href="https://github.com/MohammedLike/Indicator-Testing-" class="link-chip" target="_blank" rel="noopener">GitHub</a>
-                  <a href="https://github.com/TA-Lib/ta-lib-python" class="link-chip" target="_blank" rel="noopener">TA-Lib Docs</a>
+                  <a href="https://github.com/MohammedLike/Indicator-Testing-" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -500,21 +638,31 @@ pytest CI · Streamlit Review UI</pre>
         </article>
 
         <!-- Project 3 -->
-        <article class="project-card project-tile reveal" data-category="ai">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">03</span><span class="card-tag tag-ai">AI Research</span></div>
-            <p class="card-label">Catalyst Intelligence R&amp;D</p>
-            <h3>AI Catalyst Engine &amp; Sentiment Analysis Research</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>15+</strong><span>Datasets</span></div>
-              <div class="metric-pill"><strong>8</strong><span>Scoring Models</span></div>
-              <div class="metric-pill"><strong>4</strong><span>Engine Layers</span></div>
-              <div class="metric-pill"><strong>92%</strong><span>Target Accuracy</span></div>
+        <article class="project-row project-tile reveal" data-category="ai">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">03</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--ai">AI · RESEARCH</span>
+                <h3 class="project-row__title">AI Catalyst Engine &amp; Sentiment Analysis Research</h3>
+                <p class="project-row__desc">Multi-stage catalyst pipeline for earnings, liquidity events, and narrative sentiment scoring.</p>
+                <ul class="project-row__feats">
+                <li>Ingest → feature → score → risk → monitor layers</li>
+                <li>Sentiment on earnings &amp; quarterly reports</li>
+                <li>Backtested signals vs historical reactions</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>Python</span>
+              <span>NLP</span>
+              <span>ML Pipelines</span>
+              <span>Backtesting</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -526,7 +674,7 @@ pytest CI · Streamlit Review UI</pre>
                 <div class="card-tech"><span>Python</span><span>NLP</span><span>Backtesting</span><span>ML Pipelines</span></div>
                 <p class="card-impact">Defined the blueprint for Stockwiz's AI catalyst identification product line.</p>
                 <div class="card-links">
-                  <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">Quant Folio Platform</a>
+                  <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -554,21 +702,31 @@ pytest CI · Streamlit Review UI</pre>
         </article>
 
         <!-- Project 4 -->
-        <article class="project-card project-tile reveal" data-category="intel">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">04</span><span class="card-tag tag-intel">Market Intel</span></div>
-            <p class="card-label">Live Market Intelligence Hub</p>
-            <h3>Daily Market Snapshot &amp; Intelligence Dashboard</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>12</strong><span>Data Feeds</span></div>
-              <div class="metric-pill"><strong>Daily</strong><span>Auto Reports</span></div>
-              <div class="metric-pill"><strong>6</strong><span>Index Trackers</span></div>
-              <div class="metric-pill"><strong>PDF</strong><span>Export Ready</span></div>
+        <article class="project-row project-tile reveal" data-category="intel">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">04</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--intel">MARKET · INTEL</span>
+                <h3 class="project-row__title">Daily Market Snapshot &amp; Intelligence Dashboard</h3>
+                <p class="project-row__desc">Live market intelligence hub with automated daily reports and one-click PDF export for leadership.</p>
+                <ul class="project-row__feats">
+                <li>FII/DII · VIX · sector breadth · key movers</li>
+                <li>React SPA with Recharts &amp; live data</li>
+                <li>Daily auto-report · PDF export ready</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>React</span>
+              <span>Vite</span>
+              <span>FastAPI</span>
+              <span>Recharts</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -580,8 +738,7 @@ pytest CI · Streamlit Review UI</pre>
                 <div class="card-tech"><span>React</span><span>Vite</span><span>FastAPI</span><span>Recharts</span></div>
                 <p class="card-impact">Gave leadership real-time market visibility every trading day.</p>
                 <div class="card-links">
-                  <a href="https://github.com/MohammedLike/Market-Snapshot-" class="link-chip" target="_blank" rel="noopener">GitHub</a>
-                  <a href="https://www.nseindia.com" class="link-chip" target="_blank" rel="noopener">NSE India</a>
+                  <a href="https://github.com/MohammedLike/Market-Snapshot-" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -604,22 +761,32 @@ pytest CI · Streamlit Review UI</pre>
         </div>
         </article>
 
-        <!-- Project 5 — FLAGSHIP -->
-        <article class="project-card project-card--flagship project-tile reveal" data-category="data flagship">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">05</span><span class="card-tag tag-flagship">★ Flagship · Production</span></div>
-            <p class="card-label">Primary Deliverable — Daily Operations System</p>
-            <h3>StockWiz Research Report Automation System</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>2,370</strong><span>Instruments</span></div>
-              <div class="metric-pill"><strong>3,498</strong><span>Logos</span></div>
-              <div class="metric-pill"><strong>&lt;60s</strong><span>Per PDF</span></div>
-              <div class="metric-pill"><strong>~97%</strong><span>Time Saved</span></div>
+        <!-- Project 5 — Core -->
+        <article class="project-row project-row--core project-tile reveal" data-category="data flagship">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">05</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--core">CORE · PRODUCTION</span>
+                <h3 class="project-row__title">StockWiz Research Report Automation System</h3>
+                <p class="project-row__desc">Primary daily-ops system — SEBI-compliant PDFs for 2,370 instruments in under 60 seconds per report.</p>
+                <ul class="project-row__feats">
+                <li>2,370 instruments · 3,498 logos · &lt;60s per PDF</li>
+                <li>Batch CSV upload with live SSE progress</li>
+                <li>Replaced manual ChatGPT → PDF workflow (~97% saved)</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>FastAPI</span>
+              <span>React</span>
+              <span>Playwright</span>
+              <span>SSE</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -631,9 +798,7 @@ pytest CI · Streamlit Review UI</pre>
                 <div class="card-tech"><span>FastAPI</span><span>React</span><span>Playwright</span><span>SSE</span><span>yfinance</span></div>
                 <p class="card-impact">Highest business impact — research desk runs entirely on this system post-market.</p>
                 <div class="card-links">
-                  <a href="#flagship-report" class="link-chip link-chip--primary">Full Deep Dive</a>
-                  <a href="https://github.com/MohammedLike/Research-Report-Automation" class="link-chip" target="_blank" rel="noopener">GitHub — Production</a>
-                  <a href="https://github.com/MohammedLike/Report-Automation" class="link-chip" target="_blank" rel="noopener">GitHub — Scaffold</a>
+                  <a href="https://github.com/MohammedLike/Research-Report-Automation" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -662,21 +827,31 @@ pytest CI · Streamlit Review UI</pre>
         </article>
 
         <!-- Project 6 -->
-        <article class="project-card project-tile reveal" data-category="data">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">06</span><span class="card-tag tag-data">Data Engineering</span></div>
-            <p class="card-label">Master Equity Data Lake</p>
-            <h3>Large-Scale Equity Data Scraping &amp; Database Population</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>3,370</strong><span>Stocks</span></div>
-              <div class="metric-pill"><strong>14</strong><span>Fields / Stock</span></div>
-              <div class="metric-pill"><strong>2.1M+</strong><span>Data Points</span></div>
-              <div class="metric-pill"><strong>3</strong><span>Downstream Apps</span></div>
+        <article class="project-row project-tile reveal" data-category="data">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">06</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--data">DATA · ENGINEERING</span>
+                <h3 class="project-row__title">Large-Scale Equity Data Scraping &amp; Database Population</h3>
+                <p class="project-row__desc">Master equity data lake scraping 3,370 stocks from Screener.in into structured PostgreSQL schemas.</p>
+                <ul class="project-row__feats">
+                <li>3,370 NSE/BSE stocks · 2.1M+ data points</li>
+                <li>14 fundamental fields per stock</li>
+                <li>Single source of truth for all downstream apps</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>Python</span>
+              <span>PostgreSQL</span>
+              <span>Screener</span>
+              <span>ETL</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -688,8 +863,7 @@ pytest CI · Streamlit Review UI</pre>
                 <div class="card-tech"><span>Python</span><span>PostgreSQL</span><span>Screener</span><span>ETL</span></div>
                 <p class="card-impact">Built the data foundation every other internship system depends on.</p>
                 <div class="card-links">
-                  <a href="https://www.screener.in" class="link-chip" target="_blank" rel="noopener">Screener.in</a>
-                  <a href="https://github.com/MohammedLike/Research-Report-Automation" class="link-chip" target="_blank" rel="noopener">Report Automation</a>
+                  <a href="https://github.com/MohammedLike/Research-Report-Automation" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -712,21 +886,30 @@ pytest CI · Streamlit Review UI</pre>
         </article>
 
         <!-- Project 7 -->
-        <article class="project-card project-tile reveal" data-category="research">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">07</span><span class="card-tag tag-research">Competitive Intel</span></div>
-            <p class="card-label">Product Strategy Intelligence</p>
-            <h3>FinTech Platform Research &amp; Competitive Landscape Analysis</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>8</strong><span>Platforms</span></div>
-              <div class="metric-pill"><strong>120+</strong><span>Features</span></div>
-              <div class="metric-pill"><strong>6</strong><span>Report Sections</span></div>
-              <div class="metric-pill"><strong>15</strong><span>Gap Items</span></div>
+        <article class="project-row project-tile reveal" data-category="research">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">07</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--research">RESEARCH · INTEL</span>
+                <h3 class="project-row__title">FinTech Platform Research &amp; Competitive Landscape Analysis</h3>
+                <p class="project-row__desc">Structured competitive intelligence across 8 FinTech platforms shaping Stockwiz product roadmap.</p>
+                <ul class="project-row__feats">
+                <li>8 platforms · 120+ features catalogued</li>
+                <li>Backtesting · execution · UX · pricing matrix</li>
+                <li>15 gap items driving roadmap priorities</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>Product Research</span>
+              <span>Competitive Intel</span>
+              <span>Documentation</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -737,10 +920,6 @@ pytest CI · Streamlit Review UI</pre>
                 </ul>
                 <div class="card-tech"><span>Competitive Intel</span><span>Product Research</span><span>Documentation</span></div>
                 <p class="card-impact">Steered executive product decisions with structured competitive intelligence.</p>
-                <div class="card-links">
-                  <a href="https://www.tradeomat.com" class="link-chip" target="_blank" rel="noopener">Tradeomat</a>
-                  <a href="https://finstocks.ai" class="link-chip" target="_blank" rel="noopener">Finstocks.ai</a>
-                </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
                 <pre class="arch-diagram arch-diagram--sm">Competitor Platforms
@@ -761,21 +940,31 @@ pytest CI · Streamlit Review UI</pre>
         </article>
 
         <!-- Project 8 -->
-        <article class="project-card project-tile reveal" data-category="research">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">08</span><span class="card-tag tag-research">Platform Intel</span></div>
-            <p class="card-label">Strategy Knowledge Base</p>
-            <h3>Streak / Zerodha Strategy Intelligence &amp; Data Ingestion</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>209</strong><span>Indicators</span></div>
-              <div class="metric-pill"><strong>150+</strong><span>Strategies</span></div>
-              <div class="metric-pill"><strong>6</strong><span>Audit Sheets</span></div>
-              <div class="metric-pill"><strong>5</strong><span>Qdrant Indexes</span></div>
+        <article class="project-row project-tile reveal" data-category="research">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">08</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--research">PLATFORM · INTEL</span>
+                <h3 class="project-row__title">Streak / Zerodha Strategy Intelligence &amp; Data Ingestion</h3>
+                <p class="project-row__desc">Competitive strategy knowledge base with 209 Streak indicators indexed for AI retrieval.</p>
+                <ul class="project-row__feats">
+                <li>209 indicators with build suggestions</li>
+                <li>6-sheet backtest bias audit workbook</li>
+                <li>PostgreSQL + Qdrant semantic indexing</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>Streak</span>
+              <span>PostgreSQL</span>
+              <span>Qdrant</span>
+              <span>openpyxl</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -787,8 +976,7 @@ pytest CI · Streamlit Review UI</pre>
                 <div class="card-tech"><span>Streak</span><span>PostgreSQL</span><span>Qdrant</span><span>openpyxl</span></div>
                 <p class="card-impact">Powered the AI strategy platform with real-world competitor intelligence.</p>
                 <div class="card-links">
-                  <a href="https://www.streak.tech" class="link-chip" target="_blank" rel="noopener">Streak</a>
-                  <a href="https://github.com/MohammedLike/No-Code-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">AI Builder</a>
+                  <a href="https://github.com/MohammedLike/No-Code-Strategy-Builder" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -812,21 +1000,31 @@ pytest CI · Streamlit Review UI</pre>
         </article>
 
         <!-- Project 9 -->
-        <article class="project-card project-tile reveal" data-category="trading">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">09</span><span class="card-tag tag-trading">Derivatives</span></div>
-            <p class="card-label">Options Strategy Knowledge Graph</p>
-            <h3>Options Selling Strategy Research Library</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>45+</strong><span>Strategies</span></div>
-              <div class="metric-pill"><strong>9</strong><span>Spread Types</span></div>
-              <div class="metric-pill"><strong>Greeks</strong><span>Modeled</span></div>
-              <div class="metric-pill"><strong>RAG</strong><span>Indexed</span></div>
+        <article class="project-row project-tile reveal" data-category="trading">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">09</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--trading">TRADING · OPTIONS</span>
+                <h3 class="project-row__title">Options Selling Strategy Research Library</h3>
+                <p class="project-row__desc">Searchable options playbook with payoff diagrams, Greeks modeling, and RAG-indexed strategy specs.</p>
+                <ul class="project-row__feats">
+                <li>45+ strategies · 9 spread types</li>
+                <li>Iron condors · strangles · jade lizards catalogued</li>
+                <li>Embedded in Quant Folio options DB</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>Options</span>
+              <span>Black-Scholes</span>
+              <span>Qdrant</span>
+              <span>PostgreSQL</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -838,7 +1036,7 @@ pytest CI · Streamlit Review UI</pre>
                 <div class="card-tech"><span>Options</span><span>Black-Scholes</span><span>Qdrant</span><span>PostgreSQL</span></div>
                 <p class="card-impact">Searchable options playbook powering F&amp;O strategy generation.</p>
                 <div class="card-links">
-                  <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">Quant Folio Integration</a>
+                  <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -860,22 +1058,33 @@ pytest CI · Streamlit Review UI</pre>
         </div>
         </article>
 
-        <!-- Project 10 — FLAGSHIP -->
-        <article class="project-card project-card--flagship project-tile reveal" data-category="ai flagship">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">10</span><span class="card-tag tag-flagship">★ Flagship · AI Platform</span></div>
-            <p class="card-label">Primary Deliverable — Strategic R&amp;D Platform</p>
-            <h3>Quant Folio — RAG + LLM + MCP Quant Research Platform</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>7</strong><span>Docker Svcs</span></div>
-              <div class="metric-pill"><strong>~1,800</strong><span>Strategies</span></div>
-              <div class="metric-pill"><strong>310+</strong><span>Client Pines</span></div>
-              <div class="metric-pill"><strong>5</strong><span>RAG Collections</span></div>
+        <!-- Project 10 — Core -->
+        <article class="project-row project-row--core project-tile reveal" data-category="ai flagship">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">10</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--core">CORE · AI PLATFORM</span>
+                <h3 class="project-row__title">Quant Folio — RAG + LLM + MCP Quant Research Platform</h3>
+                <p class="project-row__desc">AI quant operating system with natural-language strategy creation, VectorBT backtesting, and MCP agents.</p>
+                <ul class="project-row__feats">
+                <li>7 Docker services · ~1,800 strategy records</li>
+                <li>5 Qdrant collections · 310+ client Pine requests</li>
+                <li>MCP tools · Ollama LLM · TimescaleDB</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>Ollama</span>
+              <span>MCP</span>
+              <span>RAG</span>
+              <span>VectorBT</span>
+              <span>Qdrant</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -887,9 +1096,7 @@ pytest CI · Streamlit Review UI</pre>
                 <div class="card-tech"><span>Ollama</span><span>MCP</span><span>RAG</span><span>VectorBT</span><span>Qdrant</span><span>LangChain</span></div>
                 <p class="card-impact">Natural-language strategy creation with institutional-grade backtesting — the future of the platform.</p>
                 <div class="card-links">
-                  <a href="#flagship-ai" class="link-chip link-chip--primary">Full Deep Dive</a>
-                  <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">GitHub — Quant Folio</a>
-                  <a href="https://github.com/MohammedLike/No-Code-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">GitHub — AI Builder</a>
+                  <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -910,21 +1117,31 @@ L1  TimescaleDB — OHLCV · Options · Strategies</pre>
         </article>
 
         <!-- Project 11 -->
-        <article class="project-card project-tile reveal" data-category="quant">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">11</span><span class="card-tag tag-quant">Validation</span></div>
-            <p class="card-label">Cross-Platform QA Framework</p>
-            <h3>Backtesting &amp; P&amp;L Validation Engine</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>50+</strong><span>Strategies</span></div>
-              <div class="metric-pill"><strong>3</strong><span>Platforms</span></div>
-              <div class="metric-pill"><strong>12</strong><span>Bias Checks</span></div>
-              <div class="metric-pill"><strong>99%</strong><span>Match Target</span></div>
+        <article class="project-row project-tile reveal" data-category="quant">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">11</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--quant">QUANT · VALIDATION</span>
+                <h3 class="project-row__title">Backtesting &amp; P&amp;L Validation Engine</h3>
+                <p class="project-row__desc">Cross-platform QA framework validating P&amp;L across Quantman, Streak, and internal VectorBT engine.</p>
+                <ul class="project-row__feats">
+                <li>50+ strategies · 3 platforms cross-validated</li>
+                <li>12 bias checks · slippage &amp; lookahead audit</li>
+                <li>99% match target on trade log comparison</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>VectorBT</span>
+              <span>Quantman</span>
+              <span>TA-Lib</span>
+              <span>P&amp;L Analysis</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -936,8 +1153,7 @@ L1  TimescaleDB — OHLCV · Options · Strategies</pre>
                 <div class="card-tech"><span>Quantman</span><span>VectorBT</span><span>TA-Lib</span><span>P&amp;L Analysis</span></div>
                 <p class="card-impact">Guaranteed strategy reliability before client-facing deployment.</p>
                 <div class="card-links">
-                  <a href="https://quantman.trade" class="link-chip" target="_blank" rel="noopener">Quantman</a>
-                  <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">Internal Engine</a>
+                  <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -958,21 +1174,31 @@ P&amp;L Compare · Bias Audit
         </article>
 
         <!-- Project 12 -->
-        <article class="project-card project-tile reveal" data-category="research">
-          <button type="button" class="tile-trigger" aria-label="View project details">
-          <div class="project-card__inner">
-            <div class="card-top"><span class="card-num">12</span><span class="card-tag tag-research">Product Design</span></div>
-            <p class="card-label">Scalping Mode Product Line</p>
-            <h3>Quant Folio Scalper Mode — Research &amp; Live Prototype</h3>
-            <div class="card-metrics">
-              <div class="metric-pill"><strong>8</strong><span>Templates</span></div>
-              <div class="metric-pill"><strong>4</strong><span>Confluence Modes</span></div>
-              <div class="metric-pill"><strong>1-min</strong><span>Bar Support</span></div>
-              <div class="metric-pill"><strong>Live</strong><span>Backtest UI</span></div>
+        <article class="project-row project-tile reveal" data-category="research">
+                    <button type="button" class="tile-trigger project-row__trigger" aria-label="View project details">
+            <span class="project-row__ghost" aria-hidden="true">12</span>
+            <div class="project-row__main">
+              <div class="project-row__content">
+                <span class="project-row__cat project-row__cat--research">PRODUCT · DESIGN</span>
+                <h3 class="project-row__title">Quant Folio Scalper Mode — Research &amp; Live Prototype</h3>
+                <p class="project-row__desc">Scalping mode product line with Streamlit prototype, 8 templates, and full production PRD.</p>
+                <ul class="project-row__feats">
+                <li>8 scalping templates · 4 confluence modes</li>
+                <li>1-min bar support · live backtest UI</li>
+                <li>Template → builder → backtest in 3 steps</li>
+                </ul>
+              </div>
+              <div class="project-row__aside">
+                <div class="project-row__tech">
+              <span>Streamlit</span>
+              <span>Plotly</span>
+              <span>Backtesting</span>
+              <span>UX Research</span>
+                </div>
+                <span class="project-row__action">Details →</span>
+              </div>
             </div>
-            <span class="tile-cta">View details →</span>
-          </div>
-        </button>
+          </button>
         <div class="modal-source" hidden>
             <div class="card-body-grid">
               <div class="card-content">
@@ -984,7 +1210,7 @@ P&amp;L Compare · Bias Audit
                 <div class="card-tech"><span>Streamlit</span><span>Plotly</span><span>Backtesting</span><span>UX Research</span></div>
                 <p class="card-impact">Working prototype + product spec for a new high-frequency trading vertical.</p>
                 <div class="card-links">
-                  <a href="https://github.com/MohammedLike/Scalping-Mode" class="link-chip" target="_blank" rel="noopener">GitHub Repo</a>
+                  <a href="https://github.com/MohammedLike/Scalping-Mode" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
               <div class="card-arch-wrap card-arch-wrap--open">
@@ -1180,7 +1406,7 @@ P&amp;L Compare · Bias Audit
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <span class="timeline-phase">Phase 2 · Core Production Systems</span>
-            <h3>Flagship Deliverables Shipped</h3>
+            <h3>Core Project Tasks Shipped</h3>
             <p>Built and deployed the <strong>Research Report Automation System</strong> (2,370 stocks, Playwright PDFs) and began the <strong>Quant Folio RAG + LLM + MCP platform</strong> — alongside Nifty Pharma analysis, indicator testing, and market snapshot dashboard.</p>
             <div class="timeline-tags">
               <span>★ Report Automation</span><span>★ Quant Folio AI</span><span>#1 Nifty Pharma</span><span>#4 Market Snapshot</span>
