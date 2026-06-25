@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Internship portfolio — quantitative research, FinTech development, AI/ML, and market intelligence." />
+  <title>Internship Portfolio Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#hero" class="nav-logo">Mohammed Like</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#summary" class="nav-link">Summary</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#impact" class="nav-link">Impact</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline</a></li>
+        <li>
+          <button class="btn btn-sm btn-outline" id="printBtn" type="button">PDF</button>
+        </li>
+        <li>
+          <button class="btn btn-sm btn-ghost" id="themeToggle" type="button" aria-label="Toggle theme">Light</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Internship Portfolio · Stockwiz Technologies LLP</p>
+      <h1 class="hero-title">
+        <span class="hero-name">Mohammed<br />Like</span>
+      </h1>
+      <p class="hero-role">Quantitative Research &amp; FinTech Development Intern</p>
+      <p class="hero-desc">
+        A presentation of work completed during my internship — quantitative analysis,
+        Pine Script strategies, AI-powered systems, data engineering, and automated market intelligence.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-pill">
+          <strong>2,370+</strong>
+          <span>Stocks Integrated</span>
+        </div>
+        <div class="stat-pill">
+          <strong>12</strong>
+          <span>Major Projects</span>
+        </div>
+        <div class="stat-pill">
+          <strong>3,370</strong>
+          <span>Stocks Scraped</span>
+        </div>
+        <div class="stat-pill">
+          <strong>AI/RAG</strong>
+          <span>Prototype Built</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#summary" class="btn btn-outline">Read Summary</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Executive Summary -->
+  <section class="section" id="summary">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <div>
+          <span class="section-tag">Overview</span>
+          <h2>Executive Summary</h2>
+        </div>
+      </div>
+      <div class="summary-card reveal">
+        <p>
+          During this internship at <strong>Stockwiz Technologies LLP</strong>, I contributed across the full spectrum of
+          FinTech product development — from hands-on quantitative analysis of Nifty Pharma stocks and KPI
+          benchmarking, to building Pine Script trading strategies and a full-stack automated report generation
+          platform serving 2,370+ equities.
+        </p>
+        <p>
+          I engineered large-scale data pipelines scraping 2,000–3,370 listed stocks, researched competitive
+          FinTech platforms and options-selling strategies, and prototyped an AI-based strategy generation
+          system using local LLMs, RAG architecture, and MCP server integrations. Daily market intelligence
+          reporting, backtesting validation, and scalping mode feature design rounded out a breadth of
+          deliverables spanning research, engineering, and product thinking.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter -->
+  <section class="section section-projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <div>
+          <span class="section-tag">Deliverables</span>
+          <h2>Projects &amp; Work Areas</h2>
+          <p class="section-sub">12 major contributions across quant research, engineering, AI, and market intelligence.</p>
+        </div>
+      </div>
+
+      <div class="filter-bar reveal" id="filterBar">
+        <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="quant" type="button">Quant Research</button>
+        <button class="filter-btn" data-filter="trading" type="button">Trading</button>
+        <button class="filter-btn" data-filter="ai" type="button">AI / ML</button>
+        <button class="filter-btn" data-filter="data" type="button">Data Engineering</button>
+        <button class="filter-btn" data-filter="intel" type="button">Market Intel</button>
+        <button class="filter-btn" data-filter="research" type="button">Research</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal" data-category="quant">
+          <div class="card-top">
+            <span class="card-num">01</span>
+            <span class="card-tag tag-quant">Quant Research</span>
+          </div>
+          <h3>Nifty Pharma KPI-Based Stock Comparison &amp; Prediction</h3>
+          <ul>
+            <li>Compared the top 5 Nifty Pharma stocks</li>
+            <li>Analysed and compared KPI benchmarking against the Nifty Pharma Index</li>
+            <li>Developed a Jupyter Notebook (<code>.ipynb</code>) for analysis</li>
+            <li>Predicted potential outperforming stocks using quantitative metrics</li>
+          </ul>
+          <div class="card-tech">
+            <span>Python</span><span>Jupyter</span><span>Pandas</span><span>KPI Analysis</span>
+          </div>
+          <p class="card-impact">Delivered data-driven stock ranking insights for sector-level investment decisions.</p>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal" data-category="trading">
+          <div class="card-top">
+            <span class="card-num">02</span>
+            <span class="card-tag tag-trading">Trading</span>
+          </div>
+          <h3>Technical Indicator Research &amp; Pine Strategy Development</h3>
+          <ul>
+            <li>Studied momentum-based and trend-following indicators</li>
+            <li>Learned RSI, MACD, EMA, SMA, VWAP, Supertrend, Bollinger Bands, Stochastic, and more</li>
+            <li>Developed TradingView Pine Script strategies</li>
+            <li>Created client-specific trading strategies</li>
+          </ul>
+          <div class="card-tech">
+            <span>Pine Script</span><span>TradingView</span><span>Technical Analysis</span>
+          </div>
+          <p class="card-impact">Translated indicator theory into deployable, client-ready trading strategies.</p>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal" data-category="ai">
+          <div class="card-top">
+            <span class="card-num">03</span>
+            <span class="card-tag tag-ai">AI / ML</span>
+          </div>
+          <h3>AI-Based Catalyst Engine &amp; Sentiment Analysis Research</h3>
+          <ul>
+            <li>Worked on Catalyst Engine backtesting</li>
+            <li>Researched AI-powered stock analysis systems</li>
+            <li>Collected liquidity, annual/quarterly report, and market datasets</li>
+            <li>Performed sentiment analysis on financial data</li>
+            <li>Studied data ingestion, feature engineering, scoring engines, risk engines, and monitoring systems</li>
+          </ul>
+          <div class="card-tech">
+            <span>Python</span><span>NLP</span><span>Backtesting</span><span>Data Pipelines</span>
+          </div>
+          <p class="card-impact">Built foundational knowledge for AI-driven stock catalyst identification systems.</p>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card reveal" data-category="intel">
+          <div class="card-top">
+            <span class="card-num">04</span>
+            <span class="card-tag tag-intel">Market Intel</span>
+          </div>
+          <h3>Daily Market Snapshot &amp; Market Intelligence Reporting</h3>
+          <ul>
+            <li>Prepared daily market reports</li>
+            <li>Analyzed FII/DII activity, VIX, key movers, and filings published</li>
+            <li>Tracked index movements, sector performance, market breadth, and market-moving news</li>
+            <li>Created a web page for daily market activity with live data injected into the snapshot</li>
+          </ul>
+          <div class="card-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Live Data APIs</span>
+          </div>
+          <p class="card-impact">Enabled real-time market visibility for stakeholders through automated daily snapshots.</p>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card reveal" data-category="data">
+          <div class="card-top">
+            <span class="card-num">05</span>
+            <span class="card-tag tag-data">Full-Stack</span>
+          </div>
+          <h3>Automated Signal Input &amp; Report Generation System</h3>
+          <ul>
+            <li>Developed a Python-based report automation platform</li>
+            <li>Built frontend, backend, and database architecture</li>
+            <li>Integrated data for 2,370+ stocks</li>
+            <li>Automated report generation using prebuilt HTML, CSS, JS, and React structure</li>
+            <li>Included OHLC, market cap, stock information, company data, and logos</li>
+            <li>Significantly reduced manual reporting efforts</li>
+          </ul>
+          <div class="card-tech">
+            <span>Python</span><span>React</span><span>PostgreSQL</span><span>HTML/CSS/JS</span>
+          </div>
+          <p class="card-impact">Cut manual report creation time dramatically across 2,370+ equity instruments.</p>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card reveal" data-category="data">
+          <div class="card-top">
+            <span class="card-num">06</span>
+            <span class="card-tag tag-data">Data Engineering</span>
+          </div>
+          <h3>Large-Scale Equity Data Scraping &amp; Database Population</h3>
+          <ul>
+            <li>Scraped data for approximately 2,000–3,370 listed stocks</li>
+            <li>Extracted fundamental and financial information from Screener</li>
+            <li>Structured and stored data for research and analytics use cases</li>
+            <li>Created datasets for database integration</li>
+          </ul>
+          <div class="card-tech">
+            <span>Python</span><span>Web Scraping</span><span>SQL</span><span>Screener</span>
+          </div>
+          <p class="card-impact">Built the foundational equity dataset powering downstream research and reporting tools.</p>
+        </article>
+
+        <!-- Project 7 -->
+        <article class="project-card reveal" data-category="research">
+          <div class="card-top">
+            <span class="card-num">07</span>
+            <span class="card-tag tag-research">Research</span>
+          </div>
+          <h3>FinTech Platform Research &amp; Competitive Analysis</h3>
+          <ul>
+            <li>Researched Tradeomat, Finstocks, and other FinTech platforms</li>
+            <li>Studied product features, strategy builders, backtesting systems, and user workflows</li>
+            <li>Created competitive intelligence reports for future projects</li>
+          </ul>
+          <div class="card-tech">
+            <span>Competitive Intel</span><span>Product Research</span><span>Documentation</span>
+          </div>
+          <p class="card-impact">Informed product roadmap decisions with structured competitive landscape analysis.</p>
+        </article>
+
+        <!-- Project 8 -->
+        <article class="project-card reveal" data-category="research">
+          <div class="card-top">
+            <span class="card-num">08</span>
+            <span class="card-tag tag-research">Platform Research</span>
+          </div>
+          <h3>Trading Strategy Data Collection &amp; Platform Intelligence</h3>
+          <ul>
+            <li>Researched Streak (Zerodha ecosystem) features</li>
+            <li>Collected trading strategies and AI assistant workflows</li>
+            <li>Studied option-selling strategies and strategy-builder features</li>
+            <li>Organized strategy data for internal platform development</li>
+            <li>Dumped all data into a database for future use</li>
+          </ul>
+          <div class="card-tech">
+            <span>Streak</span><span>Zerodha</span><span>Database</span><span>Strategy Data</span>
+          </div>
+          <p class="card-impact">Curated a reusable strategy knowledge base for internal platform development.</p>
+        </article>
+
+        <!-- Project 9 -->
+        <article class="project-card reveal" data-category="trading">
+          <div class="card-top">
+            <span class="card-num">09</span>
+            <span class="card-tag tag-trading">Derivatives</span>
+          </div>
+          <h3>Options Selling Strategy Research</h3>
+          <ul>
+            <li>Collected options-selling strategies from multiple marketplaces and sources</li>
+            <li>Studied Short Straddle, Short Strangle, Iron Condor, Iron Butterfly, Broken Wing Butterfly, Jade Lizard, Credit Spreads, Calendar Spreads, and Ratio Spreads</li>
+            <li>Documented risk management and strategy structures</li>
+          </ul>
+          <div class="card-tech">
+            <span>Options</span><span>Risk Management</span><span>Documentation</span>
+          </div>
+          <p class="card-impact">Created a comprehensive options strategy reference library for the team.</p>
+        </article>
+
+        <!-- Project 10 -->
+        <article class="project-card reveal" data-category="ai">
+          <div class="card-top">
+            <span class="card-num">10</span>
+            <span class="card-tag tag-ai">AI Platform</span>
+          </div>
+          <h3>AI-Based MCP Local LLM Model Builder Prototype</h3>
+          <ul>
+            <li>Built an AI-based strategy generation platform using local LLMs through Ollama</li>
+            <li>Implemented RAG architecture with Qdrant vector database</li>
+            <li>Built MCP/LCP server integrations</li>
+            <li>Used PostgreSQL, Redis, schedulers, and APIs</li>
+            <li>Added prompt-based Pine Script generation feature</li>
+            <li>Ingested OHLC, strategy, and options strategy data</li>
+            <li>Enabled natural-language backtesting strategy creation</li>
+          </ul>
+          <div class="card-tech">
+            <span>Ollama</span><span>RAG</span><span>MCP</span><span>Qdrant</span><span>PostgreSQL</span><span>Redis</span>
+          </div>
+          <p class="card-impact">Pioneered natural-language strategy creation — a key differentiator for the platform.</p>
+        </article>
+
+        <!-- Project 11 -->
+        <article class="project-card reveal" data-category="quant">
+          <div class="card-top">
+            <span class="card-num">11</span>
+            <span class="card-tag tag-quant">Validation</span>
+          </div>
+          <h3>Backtesting &amp; P&amp;L Validation</h3>
+          <ul>
+            <li>Conducted backtesting on Quantman and internal strategy builders</li>
+            <li>Compared P&amp;L reports across platforms</li>
+            <li>Evaluated strategy performance</li>
+            <li>Saved and analyzed backtesting datasets</li>
+            <li>Validated strategy outputs and reporting accuracy</li>
+          </ul>
+          <div class="card-tech">
+            <span>Quantman</span><span>Backtesting</span><span>P&amp;L Analysis</span>
+          </div>
+          <p class="card-impact">Ensured cross-platform strategy reliability through rigorous P&amp;L validation.</p>
+        </article>
+
+        <!-- Project 12 -->
+        <article class="project-card reveal" data-category="research">
+          <div class="card-top">
+            <span class="card-num">12</span>
+            <span class="card-tag tag-research">Product Design</span>
+          </div>
+          <h3>Scalping Mode Research &amp; Builder Feature Design</h3>
+          <ul>
+            <li>Researched scalping strategies and methodologies</li>
+            <li>Studied short-term trading indicators</li>
+            <li>Evaluated indicator combinations for scalping</li>
+            <li>Designed requirements for a dedicated Scalping Mode in the strategy builder</li>
+            <li>Proposed feature enhancements and implementation approaches</li>
+          </ul>
+          <div class="card-tech">
+            <span>Scalping</span><span>Product Design</span><span>UX Research</span>
+          </div>
+          <p class="card-impact">Defined product requirements for a new high-frequency trading mode in the platform.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section-skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <div>
+          <span class="section-tag">Capabilities</span>
+          <h2>Skills &amp; Technologies</h2>
+        </div>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <div class="skill-chips">
+            <span>Python</span><span>JavaScript</span><span>Pine Script</span><span>SQL</span><span>HTML / CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Data &amp; ML</h3>
+          <div class="skill-chips">
+            <span>Jupyter</span><span>Pandas</span><span>RAG</span><span>Sentiment Analysis</span><span>Qdrant</span><span>Vector DB</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Infrastructure</h3>
+          <div class="skill-chips">
+            <span>PostgreSQL</span><span>Redis</span><span>Ollama</span><span>MCP Servers</span><span>Schedulers</span><span>REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Finance &amp; Trading</h3>
+          <div class="skill-chips">
+            <span>Technical Indicators</span><span>Options Strategies</span><span>Backtesting</span><span>KPI Analysis</span><span>Market Data</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; Platforms</h3>
+          <div class="skill-chips">
+            <span>TradingView</span><span>Quantman</span><span>Screener</span><span>Streak / Zerodha</span><span>React</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Domains</h3>
+          <div class="skill-chips">
+            <span>Competitive Intel</span><span>Product Research</span><span>Report Automation</span><span>Web Scraping</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="section section-impact" id="impact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <div>
+          <span class="section-tag">Outcomes</span>
+          <h2>Key Impact Metrics</h2>
+        </div>
+      </div>
+      <div class="impact-grid reveal">
+        <div class="impact-card">
+          <div class="impact-value">2,370+</div>
+          <div class="impact-label">Stocks in Automated Reporting</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">3,370</div>
+          <div class="impact-label">Stocks Scraped &amp; Structured</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">12</div>
+          <div class="impact-label">Major Project Areas</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">AI/RAG</div>
+          <div class="impact-label">Local LLM Prototype</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">Full-Stack</div>
+          <div class="impact-label">Report Automation Platform</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">Daily</div>
+          <div class="impact-label">Market Intelligence Reports</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section section-timeline" id="timeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <div>
+          <span class="section-tag">Journey</span>
+          <h2>Project Timeline</h2>
+          <p class="section-sub">Grouped by theme across the internship period.</p>
+        </div>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-phase">Phase 1 · Research &amp; Data Collection</span>
+            <h3>Foundation Building</h3>
+            <p>FinTech competitive analysis, Streak/Zerodha platform research, options strategy collection, and large-scale equity data scraping from Screener.</p>
+            <div class="timeline-tags">
+              <span>#7 FinTech Research</span><span>#8 Streak Intel</span><span>#9 Options</span><span>#6 Data Scraping</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-phase">Phase 2 · Analysis &amp; Development</span>
+            <h3>Core Deliverables</h3>
+            <p>Nifty Pharma KPI analysis, Pine Script strategy development, automated report generation platform, and daily market snapshot web page.</p>
+            <div class="timeline-tags">
+              <span>#1 Nifty Pharma</span><span>#2 Pine Script</span><span>#5 Report Automation</span><span>#4 Market Snapshot</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-phase">Phase 3 · AI &amp; Advanced Systems</span>
+            <h3>Innovation &amp; Validation</h3>
+            <p>AI Catalyst Engine research, local LLM/RAG prototype with MCP integrations, backtesting P&amp;L validation, and scalping mode feature design.</p>
+            <div class="timeline-tags">
+              <span>#3 Catalyst Engine</span><span>#10 AI/RAG Prototype</span><span>#11 Backtesting</span><span>#12 Scalping Mode</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p class="footer-title">Mohammed Like</p>
+        <p>Internship Portfolio Report</p>
+        <p><strong>Stockwiz Technologies LLP</strong> · June 2025</p>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="footer-link">Back to top</a>
+        <button class="btn btn-sm btn-outline" id="printBtnFooter" type="button">Save as PDF</button>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
