@@ -15,7 +15,7 @@
   const projectCards = document.querySelectorAll('.project-row, .project-card');
 
   // ── Theme ─────────────────────────────────────────────────
-  const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 
