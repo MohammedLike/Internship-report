@@ -106,4 +106,79 @@
     if (btn) btn.addEventListener('click', () => window.print());
   });
 
+  // ── Detail modal ────────────────────────────────────────────
+  const modal       = document.getElementById('detailModal');
+  const modalHead   = document.getElementById('modalHead');
+  const modalBody   = document.getElementById('modalBody');
+  let lastTrigger   = null;
+
+  if (modal) {
+    document.querySelectorAll('.tile-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => openModal(trigger));
+    });
+
+    modal.querySelectorAll('[data-modal-close]').forEach(el => {
+      el.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('modal--open')) {
+        closeModal();
+      }
+    });
+  }
+
+  function openModal(trigger) {
+    const article = trigger.closest('article');
+    const source  = article && article.querySelector('.modal-source');
+    if (!source) return;
+
+    modalHead.innerHTML = '';
+
+    const badges   = trigger.querySelector('.flagship-badges');
+    const cardTop  = trigger.querySelector('.card-top');
+    const label    = trigger.querySelector('.card-label');
+    const title    = trigger.querySelector('h3');
+    const subtitle = trigger.querySelector('.flagship-subtitle');
+    const metrics  = trigger.querySelector('.card-metrics, .flagship-stats');
+
+    if (badges)   modalHead.appendChild(badges.cloneNode(true));
+    if (cardTop)  modalHead.appendChild(cardTop.cloneNode(true));
+    if (label)    modalHead.appendChild(label.cloneNode(true));
+    if (title) {
+      const t = title.cloneNode(true);
+      t.id = 'modalTitle';
+      modalHead.appendChild(t);
+    }
+    if (subtitle) modalHead.appendChild(subtitle.cloneNode(true));
+    if (metrics)  modalHead.appendChild(metrics.cloneNode(true));
+
+    modalBody.innerHTML = source.innerHTML;
+
+    modalBody.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', closeModal, { once: true });
+    });
+
+    modal.classList.add('modal--open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    lastTrigger = trigger;
+
+    const closeBtn = modal.querySelector('.modal__close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove('modal--open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    modalHead.innerHTML = '';
+    modalBody.innerHTML = '';
+    if (lastTrigger) {
+      lastTrigger.focus();
+      lastTrigger = null;
+    }
+  }
+
 })();
