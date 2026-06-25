@@ -15,7 +15,7 @@
   const projectCards = document.querySelectorAll('.project-row, .project-card');
 
   // ── Theme ─────────────────────────────────────────────────
-  const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 
@@ -82,6 +82,13 @@
   );
 
   reveals.forEach(el => revealObserver.observe(el));
+
+  // GitHub label on project rows
+  document.querySelectorAll('.project-row').forEach(row => {
+    const gh = row.querySelector('.modal-source a[href*="github.com"]');
+    const action = row.querySelector('.project-row__action');
+    if (gh && action) action.textContent = 'GitHub →';
+  });
 
   // ── Project filter ────────────────────────────────────────
   filterBtns.forEach(btn => {
