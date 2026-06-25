@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Internship portfolio — quantitative research, FinTech development, AI/ML, and market intelligence." />
+  <meta name="description" content="Internship portfolio — quantitative research, FinTech development, AI Strategy Builder, report automation, and market intelligence at Stockwiz Technologies LLP." />
   <title>Internship Portfolio Report</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +22,8 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#summary" class="nav-link">Summary</a></li>
+        <li><a href="#highlights" class="nav-link">Highlights</a></li>
+        <li><a href="#flagship" class="nav-link">Flagship</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#impact" class="nav-link">Impact</a></li>
@@ -45,30 +47,31 @@
       </h1>
       <p class="hero-role">Quantitative Research &amp; FinTech Development Intern</p>
       <p class="hero-desc">
-        A presentation of work completed during my internship — quantitative analysis,
-        Pine Script strategies, AI-powered systems, data engineering, and automated market intelligence.
+        Two flagship systems anchor this internship — an <strong>institutional research report automation platform</strong>
+        (2,370 stocks · 3,498 logos · SEBI-compliant PDFs in &lt;60s) and a <strong>RAG + LLM + MCP quant research engine</strong>
+        powering natural-language strategy creation, vectorized backtesting, and client Pine Script delivery.
       </p>
       <div class="hero-stats">
         <div class="stat-pill">
-          <strong>2,370+</strong>
-          <span>Stocks Integrated</span>
+          <strong>2,370</strong>
+          <span>Stocks Automated</span>
         </div>
         <div class="stat-pill">
-          <strong>12</strong>
-          <span>Major Projects</span>
+          <strong>3,498</strong>
+          <span>Company Logos</span>
         </div>
         <div class="stat-pill">
-          <strong>3,370</strong>
-          <span>Stocks Scraped</span>
+          <strong>212</strong>
+          <span>Indicators Tested</span>
         </div>
         <div class="stat-pill">
-          <strong>AI/RAG</strong>
-          <span>Prototype Built</span>
+          <strong>~60s</strong>
+          <span>Per Report PDF</span>
         </div>
       </div>
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#summary" class="btn btn-outline">Read Summary</a>
+        <a href="#flagship" class="btn btn-primary">Flagship Projects</a>
+        <a href="#projects" class="btn btn-outline">All 12 Projects</a>
       </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -89,19 +92,261 @@
       </div>
       <div class="summary-card reveal">
         <p>
-          During this internship at <strong>Stockwiz Technologies LLP</strong>, I contributed across the full spectrum of
-          FinTech product development — from hands-on quantitative analysis of Nifty Pharma stocks and KPI
-          benchmarking, to building Pine Script trading strategies and a full-stack automated report generation
-          platform serving 2,370+ equities.
+          During this internship at <strong>Stockwiz Technologies LLP</strong> (SEBI Registered Research Analyst · INH000013925),
+          I architected and shipped <strong>two flagship production systems</strong> that define the company's technical roadmap:
+          the <strong>Research Report Automation System</strong> (daily ops — 2,370 stocks, 3,498 logos, &lt;60s PDFs) and
+          <strong>Stryke X</strong> (strategic R&amp;D — RAG + LLM + MCP quant platform with VectorBT backtesting and 310+ client Pine pipeline).
         </p>
         <p>
-          I engineered large-scale data pipelines scraping 2,000–3,370 listed stocks, researched competitive
-          FinTech platforms and options-selling strategies, and prototyped an AI-based strategy generation
-          system using local LLMs, RAG architecture, and MCP server integrations. Daily market intelligence
-          reporting, backtesting validation, and scalping mode feature design rounded out a breadth of
-          deliverables spanning research, engineering, and product thinking.
+          Highlights include a report pipeline covering <strong>2,370 equities</strong> with <strong>3,498 company logos</strong>,
+          an AI Strategy Builder indexing <strong>~1,800 strategy records</strong> across <strong>5 Qdrant vector collections</strong>,
+          a <strong>212-indicator</strong> testing framework (158 TA-Lib + 54 custom SMC/pandas), and a client Pine Script pipeline
+          processing <strong>310+ client strategy requests</strong>. I also delivered Nifty Pharma benchmarking across 5 stocks
+          with a 13-section PostgreSQL analysis workflow, competitive intelligence on Streak/Zerodha (209 indicators catalogued),
+          and a working Scalping Mode prototype with live backtesting.
         </p>
       </div>
+    </div>
+  </section>
+
+  <!-- Key Highlights -->
+  <section class="section section-highlights" id="highlights">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">—</span>
+        <div>
+          <span class="section-tag">Business Impact</span>
+          <h2>Key Wins &amp; Measurable Results</h2>
+          <p class="section-sub">Verified metrics from shipped codebases, databases, and production pipelines.</p>
+        </div>
+      </div>
+
+      <div class="highlights-banner reveal">
+        <p class="highlight-lead">
+          Replaced a manual ChatGPT → format → PDF workflow with a <strong>one-click batch system</strong> —
+          enabling the research team to publish SEBI-compliant 8-page reports at scale after market close.
+        </p>
+      </div>
+
+      <div class="highlights-grid reveal">
+        <div class="highlight-card highlight-card--featured">
+          <div class="highlight-value">2,370</div>
+          <div class="highlight-label">Equity &amp; F&amp;O instruments in automated reporting</div>
+          <p class="highlight-note">Exact count in <code>company_profiles.csv</code> — full Screener-backed company database</p>
+        </div>
+        <div class="highlight-card highlight-card--featured">
+          <div class="highlight-value">3,498</div>
+          <div class="highlight-label">Company logos integrated for branded PDF output</div>
+          <p class="highlight-note">Local PNG library — instant logo resolution, no API dependency per report</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">&lt;60s</div>
+          <div class="highlight-label">Average time per research report PDF</div>
+          <p class="highlight-note">React build + Playwright export · was manual copy-paste per stock</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">8</div>
+          <div class="highlight-label">Pages per SEBI-compliant branded PDF</div>
+          <p class="highlight-note">Rating, chart, financials, market snapshot, disclaimers &amp; certifications</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">~1,800</div>
+          <div class="highlight-label">Strategy records in AI Builder PostgreSQL</div>
+          <p class="highlight-note">Streak strategies, Pine scripts, indicators, backtests, OHLCV, options chain</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">5</div>
+          <div class="highlight-label">Qdrant vector collections semantically indexed</div>
+          <p class="highlight-note">BGE-small 384-dim embeddings · cross-collection semantic search live</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">212</div>
+          <div class="highlight-label">Technical indicators tested &amp; validated</div>
+          <p class="highlight-note">158 TA-Lib + 37 pandas + 17 SMC · 20 golden regression snapshots</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">310+</div>
+          <div class="highlight-label">Client strategy requests in Pine generation pipeline</div>
+          <p class="highlight-note">Excel intake → PostgreSQL → Ollama LLM → TradingView Pine Script</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">3,370</div>
+          <div class="highlight-label">Listed stocks scraped &amp; structured from Screener</div>
+          <p class="highlight-note">Fundamental data pipeline powering downstream research &amp; analytics</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">209</div>
+          <div class="highlight-label">Streak indicators catalogued with build suggestions</div>
+          <p class="highlight-note">Competitive intelligence workbook for internal platform roadmap</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">12</div>
+          <div class="highlight-label">Major project deliverables across the internship</div>
+          <p class="highlight-note">Quant research · full-stack engineering · AI/RAG · market intelligence</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">24</div>
+          <div class="highlight-label">Automated test suites across projects</div>
+          <p class="highlight-note">pytest coverage for DSL, indicators, PDF pipeline, backtests &amp; APIs</p>
+        </div>
+      </div>
+
+      <div class="roi-strip reveal">
+        <div class="roi-item">
+          <span class="roi-metric">~97%</span>
+          <span class="roi-desc">Estimated time saved per report vs. manual ChatGPT workflow</span>
+        </div>
+        <div class="roi-item">
+          <span class="roi-metric">7</span>
+          <span class="roi-desc">Docker services in Stryke X quant stack (Postgres, Redis, Qdrant, Ollama, API, UI)</span>
+        </div>
+        <div class="roi-item">
+          <span class="roi-metric">13</span>
+          <span class="roi-desc">Section pharma EDA workflow — valuation through benchmark scorecard</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flagship Projects -->
+  <section class="section section-flagship" id="flagship">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">★</span>
+        <div>
+          <span class="section-tag">Primary Deliverables</span>
+          <h2>Flagship Systems — Deep Dive</h2>
+          <p class="section-sub">The two core production systems built during this internship — full architecture, data pipelines, and repository links.</p>
+        </div>
+      </div>
+
+      <!-- FLAGSHIP 1: Report Automation -->
+      <article class="flagship-card reveal" id="flagship-report">
+        <div class="flagship-header">
+          <div class="flagship-badges">
+            <span class="badge badge-flagship">Flagship Project #1</span>
+            <span class="badge badge-prod">Production System</span>
+            <span class="badge badge-sebi">SEBI Compliant</span>
+          </div>
+          <h3>StockWiz Research Report Automation System</h3>
+          <p class="flagship-subtitle">Institutional-grade equity &amp; F&amp;O research PDF pipeline — from analyst Excel to branded 8-page report in under 60 seconds</p>
+        </div>
+
+        <div class="flagship-stats">
+          <div><strong>2,370</strong><span>Company profiles</span></div>
+          <div><strong>3,498</strong><span>Logo assets</span></div>
+          <div><strong>&lt;60s</strong><span>Per PDF</span></div>
+          <div><strong>8</strong><span>Pages / report</span></div>
+          <div><strong>~97%</strong><span>Time saved</span></div>
+        </div>
+
+        <p class="flagship-desc">
+          This is the <strong>primary daily operations system</strong> for Stockwiz's research desk. It fully replaced a manual
+          ChatGPT → copy-paste → format → export workflow. Analysts now drag-and-drop a post-market signal CSV, watch live
+          SSE progress per stock, and download SEBI-compliant PDFs ready for Discord distribution — with zero manual formatting.
+        </p>
+
+        <div class="flagship-arch">
+          <p class="arch-label">System Architecture</p>
+          <pre class="arch-diagram">CSV / Excel Signal List
+        │
+        ▼
+┌───────────────────────────────────────┐
+│  REACT 18 + VITE DASHBOARD  :6173     │
+│  Drag-drop · Manual add · SSE stream  │
+└───────────────────┬───────────────────┘
+                    │ POST /generate/stream
+                    ▼
+┌───────────────────────────────────────┐
+│  FASTAPI BACKEND  :9000               │
+│  yfinance · Screener profiles         │
+│  3,498 logos · NSE lot sizes          │
+│  Vite build → Playwright PDF export   │
+└───────────────────┬───────────────────┘
+                    ▼
+        SEBI-compliant 8-page PDF output</pre>
+        </div>
+
+        <div class="flagship-analysis">
+          <p class="arch-label">In-Depth Analysis</p>
+          <ul>
+            <li><strong>Problem:</strong> Each stock required 30–45 min of manual ChatGPT drafting, HTML formatting, and PDF export — unsustainable at 2,370+ instrument scale.</li>
+            <li><strong>Solution:</strong> End-to-end orchestration — live market data (yfinance), templated fundamental/technical reasoning, automated React render, headless Chromium PDF via Playwright.</li>
+            <li><strong>Data layer:</strong> <code>company_profiles.csv</code> (2,370 rows from Screener), local PNG logo library (3,498 files), NSE F&amp;O lot-size maps.</li>
+            <li><strong>Instrument support:</strong> Equity cash, index/equity futures, calls &amp; puts with smart symbol parsing (e.g. <code>BANKNIFTY 30 JUN 54800 PUT</code>).</li>
+            <li><strong>Business outcome:</strong> Batch generation after market close with consistent Stockwiz branding, live progress tracking, and one-click downloads.</li>
+          </ul>
+        </div>
+
+        <div class="card-links flagship-links">
+          <a href="https://github.com/MohammedLike/Research-Report-Automation" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub — Production Repo</a>
+          <a href="https://github.com/MohammedLike/Report-Automation" class="link-chip" target="_blank" rel="noopener">GitHub — Stryke Scaffold</a>
+          <a href="https://www.screener.in" class="link-chip" target="_blank" rel="noopener">Data — Screener.in</a>
+          <a href="https://www.stockwiz.in" class="link-chip" target="_blank" rel="noopener">Stockwiz.in</a>
+        </div>
+      </article>
+
+      <!-- FLAGSHIP 2: AI LLM MCP -->
+      <article class="flagship-card reveal" id="flagship-ai">
+        <div class="flagship-header">
+          <div class="flagship-badges">
+            <span class="badge badge-flagship">Flagship Project #2</span>
+            <span class="badge badge-ai">AI / RAG / MCP</span>
+            <span class="badge badge-rd">Strategic R&amp;D Platform</span>
+          </div>
+          <h3>Stryke X — RAG + LLM + MCP Strategy Builder</h3>
+          <p class="flagship-subtitle">Institutional AI quant research operating system — natural-language strategy creation, vectorized backtesting, and agentic tool orchestration</p>
+        </div>
+
+        <div class="flagship-stats">
+          <div><strong>7</strong><span>Docker services</span></div>
+          <div><strong>~1,800</strong><span>Strategy records</span></div>
+          <div><strong>5</strong><span>Qdrant collections</span></div>
+          <div><strong>310+</strong><span>Client Pine requests</span></div>
+          <div><strong>112</strong><span>Backtest indicators</span></div>
+        </div>
+
+        <p class="flagship-desc">
+          The company's <strong>next-generation quant platform</strong> — not a prototype, but a multi-layer research OS integrating
+          local LLMs (Ollama / DeepSeek-R1), RAG over Qdrant, MCP tool servers for agentic workflows, VectorBT vectorized backtesting,
+          TimescaleDB hypertables for OHLCV/options chain, and a client intake pipeline that converts Excel strategy requests into
+          TradingView Pine Script via LLM generation with full audit history.
+        </p>
+
+        <div class="flagship-arch">
+          <p class="arch-label">System Architecture (5-Layer Stack)</p>
+          <pre class="arch-diagram">L5  PRESENTATION — React/Vite UI · Vanilla JS · Lightweight Charts
+         │
+L4  API GATEWAY — FastAPI · MCP Router · Pydantic · AsyncPG
+         │
+    ┌────┴────┐
+L3a COGNITIVE   L3b ANALYTICS
+    Ollama/RAG      VectorBT · TA-Lib
+    Qdrant 5 coll.  Rule Compiler · Greeks
+         │
+L2  CACHE — Redis 7 · Parquet local cache · yfinance fallback
+         │
+L1  STORAGE — TimescaleDB (ohlcv · ticks · options_chain · strategies)</pre>
+        </div>
+
+        <div class="flagship-analysis">
+          <p class="arch-label">In-Depth Analysis</p>
+          <ul>
+            <li><strong>Cognitive layer:</strong> Ollama-hosted LLMs with Qdrant RAG (BGE embeddings) for strategy hypothesis synthesis; MCP server exposes <code>get_ohlcv</code>, <code>run_backtest</code>, <code>search_similar</code> tools to AI agents.</li>
+            <li><strong>Analytics engine:</strong> VectorBT-powered vectorized simulation with Sharpe, Sortino, CAGR, max drawdown; TA-Lib indicator catalog (112 indicators in production DB); options Greeks via Black-Scholes.</li>
+            <li><strong>Data infrastructure:</strong> ~1,800 strategy records ingested (Streak, Pine scripts, indicators, backtests, OHLCV, options chain); 5 semantic Qdrant collections; Redis sub-ms backtest cache.</li>
+            <li><strong>Client pipeline:</strong> 310+ client strategy requests from Excel → PostgreSQL → LLM Pine generation → human review workflow with full generation history.</li>
+            <li><strong>Phase 1 companion:</strong> AI Strategy Builder (No-Code) delivers Strategy DSL parser/validator/compiler + semantic search — foundation for Phase 2 LLM synthesis.</li>
+          </ul>
+        </div>
+
+        <div class="card-links flagship-links">
+          <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip link-chip--primary" target="_blank" rel="noopener">GitHub — Stryke X (LLM + MCP)</a>
+          <a href="https://github.com/MohammedLike/No-Code-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">GitHub — AI Strategy Builder</a>
+          <a href="https://qdrant.tech" class="link-chip" target="_blank" rel="noopener">Vector DB — Qdrant</a>
+          <a href="https://ollama.com" class="link-chip" target="_blank" rel="noopener">LLM — Ollama</a>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -119,6 +364,7 @@
 
       <div class="filter-bar reveal" id="filterBar">
         <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="flagship" type="button">Flagship</button>
         <button class="filter-btn" data-filter="quant" type="button">Quant Research</button>
         <button class="filter-btn" data-filter="trading" type="button">Trading</button>
         <button class="filter-btn" data-filter="ai" type="button">AI / ML</button>
@@ -135,56 +381,70 @@
             <span class="card-num">01</span>
             <span class="card-tag tag-quant">Quant Research</span>
           </div>
-          <h3>Nifty Pharma KPI-Based Stock Comparison &amp; Prediction</h3>
+          <p class="card-label">Project Title</p>
+          <h3>Nifty Pharma KPI Benchmarking &amp; Stock Prediction Engine</h3>
           <ul>
-            <li>Compared the top 5 Nifty Pharma stocks</li>
-            <li>Analysed and compared KPI benchmarking against the Nifty Pharma Index</li>
-            <li>Developed a Jupyter Notebook (<code>.ipynb</code>) for analysis</li>
-            <li>Predicted potential outperforming stocks using quantitative metrics</li>
+            <li>End-to-end EDA across Cipla, Divi's Lab, Dr. Reddy's, Lupin, Sun Pharma vs. Nifty Pharma Index</li>
+            <li>PostgreSQL pipeline ingesting Screener.in Excel (P&amp;L, balance sheet, cash flow, quarters)</li>
+            <li>13-section Jupyter workflow: valuation → CAGR → correlation → benchmark scorecard</li>
+            <li>ROE, ROA, debt-to-equity, cash-flow quality, and portfolio weight analysis</li>
           </ul>
           <div class="card-tech">
-            <span>Python</span><span>Jupyter</span><span>Pandas</span><span>KPI Analysis</span>
+            <span>Python</span><span>Jupyter</span><span>Pandas</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Seaborn</span>
           </div>
-          <p class="card-impact">Delivered data-driven stock ranking insights for sector-level investment decisions.</p>
+          <p class="card-impact">Delivered institutional-style sector scorecards for investment screening.</p>
+          <div class="card-links">
+            <a href="https://github.com/MohammedLike/Stockwiz-Internship" class="link-chip" target="_blank" rel="noopener">GitHub Repo</a>
+            <a href="https://www.screener.in" class="link-chip" target="_blank" rel="noopener">Data — Screener.in</a>
+            <a href="https://www.nseindia.com/products-services/indices-nifty-pharma-index" class="link-chip" target="_blank" rel="noopener">Nifty Pharma Index</a>
+          </div>
         </article>
 
         <!-- Project 2 -->
         <article class="project-card reveal" data-category="trading">
           <div class="card-top">
             <span class="card-num">02</span>
-            <span class="card-tag tag-trading">Trading</span>
+            <span class="card-tag tag-trading">Trading R&amp;D</span>
           </div>
-          <h3>Technical Indicator Research &amp; Pine Strategy Development</h3>
+          <p class="card-label">Project Title</p>
+          <h3>TA-Lib Indicator Testing &amp; Pine Script Strategy Lab</h3>
           <ul>
-            <li>Studied momentum-based and trend-following indicators</li>
-            <li>Learned RSI, MACD, EMA, SMA, VWAP, Supertrend, Bollinger Bands, Stochastic, and more</li>
-            <li>Developed TradingView Pine Script strategies</li>
-            <li>Created client-specific trading strategies</li>
+            <li>212 indicators validated: 158 TA-Lib + 37 pandas + 17 SMC custom implementations</li>
+            <li>Golden-reference regression suite with 20 snapshot baselines for reproducibility</li>
+            <li>SMC and pandas runners with interactive Jupyter notebooks for visual review</li>
+            <li>Client-ready TradingView Pine Script strategies from indicator research</li>
           </ul>
           <div class="card-tech">
-            <span>Pine Script</span><span>TradingView</span><span>Technical Analysis</span>
+            <span>TA-Lib</span><span>Pine Script</span><span>pytest</span><span>Streamlit</span><span>TradingView</span>
           </div>
-          <p class="card-impact">Translated indicator theory into deployable, client-ready trading strategies.</p>
+          <p class="card-impact">Built the indicator quality gate for all downstream strategy and backtest work.</p>
+          <div class="card-links">
+            <a href="https://github.com/MohammedLike/Indicator-Testing-" class="link-chip" target="_blank" rel="noopener">GitHub Repo</a>
+            <a href="https://github.com/TA-Lib/ta-lib-python" class="link-chip" target="_blank" rel="noopener">TA-Lib Reference</a>
+          </div>
         </article>
 
         <!-- Project 3 -->
         <article class="project-card reveal" data-category="ai">
           <div class="card-top">
             <span class="card-num">03</span>
-            <span class="card-tag tag-ai">AI / ML</span>
+            <span class="card-tag tag-ai">AI Research</span>
           </div>
-          <h3>AI-Based Catalyst Engine &amp; Sentiment Analysis Research</h3>
+          <p class="card-label">Project Title</p>
+          <h3>AI Catalyst Engine &amp; Sentiment Analysis Research</h3>
           <ul>
-            <li>Worked on Catalyst Engine backtesting</li>
-            <li>Researched AI-powered stock analysis systems</li>
-            <li>Collected liquidity, annual/quarterly report, and market datasets</li>
-            <li>Performed sentiment analysis on financial data</li>
-            <li>Studied data ingestion, feature engineering, scoring engines, risk engines, and monitoring systems</li>
+            <li>Backtesting and validation of Catalyst Engine signal hypotheses</li>
+            <li>Researched AI stock analysis architectures: ingestion, scoring, risk, monitoring</li>
+            <li>Collected liquidity, annual/quarterly report, and market sentiment datasets</li>
+            <li>Feature engineering pipeline design for catalyst identification systems</li>
           </ul>
           <div class="card-tech">
             <span>Python</span><span>NLP</span><span>Backtesting</span><span>Data Pipelines</span>
           </div>
-          <p class="card-impact">Built foundational knowledge for AI-driven stock catalyst identification systems.</p>
+          <p class="card-impact">Laid the research foundation for AI-driven catalyst and sentiment products.</p>
+          <div class="card-links">
+            <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">Related — Stryke X</a>
+          </div>
         </article>
 
         <!-- Project 4 -->
@@ -193,38 +453,46 @@
             <span class="card-num">04</span>
             <span class="card-tag tag-intel">Market Intel</span>
           </div>
-          <h3>Daily Market Snapshot &amp; Market Intelligence Reporting</h3>
+          <p class="card-label">Project Title</p>
+          <h3>Daily Market Snapshot &amp; Intelligence Dashboard</h3>
           <ul>
-            <li>Prepared daily market reports</li>
-            <li>Analyzed FII/DII activity, VIX, key movers, and filings published</li>
-            <li>Tracked index movements, sector performance, market breadth, and market-moving news</li>
-            <li>Created a web page for daily market activity with live data injected into the snapshot</li>
+            <li>Daily reports: FII/DII flows, VIX, index movers, sector breadth, filings</li>
+            <li>React + Vite dashboard with live market data injection and PDF export</li>
+            <li>Recharts visualizations, Framer Motion UI, responsive snapshot layout</li>
           </ul>
           <div class="card-tech">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Live Data APIs</span>
+            <span>React</span><span>Vite</span><span>Recharts</span><span>yfinance</span><span>jsPDF</span>
           </div>
-          <p class="card-impact">Enabled real-time market visibility for stakeholders through automated daily snapshots.</p>
+          <p class="card-impact">Gave stakeholders real-time market visibility through automated daily snapshots.</p>
+          <div class="card-links">
+            <a href="https://github.com/MohammedLike/Market-Snapshot-" class="link-chip" target="_blank" rel="noopener">GitHub Repo</a>
+            <a href="https://www.nseindia.com" class="link-chip" target="_blank" rel="noopener">Data — NSE India</a>
+          </div>
         </article>
 
-        <!-- Project 5 -->
-        <article class="project-card reveal" data-category="data">
+        <!-- Project 5 — FLAGSHIP -->
+        <article class="project-card project-card--flagship reveal" data-category="data flagship">
           <div class="card-top">
             <span class="card-num">05</span>
-            <span class="card-tag tag-data">Full-Stack</span>
+            <span class="card-tag tag-flagship">★ Flagship · Production</span>
           </div>
-          <h3>Automated Signal Input &amp; Report Generation System</h3>
+          <p class="card-label">Primary Deliverable — Report Automation</p>
+          <h3>StockWiz Research Report Automation System</h3>
           <ul>
-            <li>Developed a Python-based report automation platform</li>
-            <li>Built frontend, backend, and database architecture</li>
-            <li>Integrated data for 2,370+ stocks</li>
-            <li>Automated report generation using prebuilt HTML, CSS, JS, and React structure</li>
-            <li>Included OHLC, market cap, stock information, company data, and logos</li>
-            <li>Significantly reduced manual reporting efforts</li>
+            <li><strong>Company's core daily ops tool</strong> — replaces entire manual research PDF workflow</li>
+            <li>React 18 + FastAPI + Playwright: CSV upload → live SSE → SEBI 8-page PDF in &lt;60s</li>
+            <li>2,370 company profiles · 3,498 logos · yfinance live data · NSE F&amp;O parsing</li>
+            <li>Equity, futures, calls &amp; puts with analyst Excel auto-detection</li>
           </ul>
           <div class="card-tech">
-            <span>Python</span><span>React</span><span>PostgreSQL</span><span>HTML/CSS/JS</span>
+            <span>FastAPI</span><span>React</span><span>Playwright</span><span>SSE</span><span>yfinance</span>
           </div>
-          <p class="card-impact">Cut manual report creation time dramatically across 2,370+ equity instruments.</p>
+          <p class="card-impact">~97% time reduction per report — the highest-impact deliverable of the internship.</p>
+          <div class="card-links">
+            <a href="#flagship-report" class="link-chip link-chip--primary">Deep Dive</a>
+            <a href="https://github.com/MohammedLike/Research-Report-Automation" class="link-chip" target="_blank" rel="noopener">GitHub — Production</a>
+            <a href="https://github.com/MohammedLike/Report-Automation" class="link-chip" target="_blank" rel="noopener">GitHub — Scaffold</a>
+          </div>
         </article>
 
         <!-- Project 6 -->
@@ -233,55 +501,67 @@
             <span class="card-num">06</span>
             <span class="card-tag tag-data">Data Engineering</span>
           </div>
+          <p class="card-label">Project Title</p>
           <h3>Large-Scale Equity Data Scraping &amp; Database Population</h3>
           <ul>
-            <li>Scraped data for approximately 2,000–3,370 listed stocks</li>
-            <li>Extracted fundamental and financial information from Screener</li>
-            <li>Structured and stored data for research and analytics use cases</li>
-            <li>Created datasets for database integration</li>
+            <li>Scraped and structured 3,370 listed stocks from Screener.in</li>
+            <li>Fundamental data extraction: financials, ratios, company metadata</li>
+            <li>PostgreSQL datasets powering report automation and AI strategy platforms</li>
           </ul>
           <div class="card-tech">
-            <span>Python</span><span>Web Scraping</span><span>SQL</span><span>Screener</span>
+            <span>Python</span><span>Web Scraping</span><span>PostgreSQL</span><span>Screener</span>
           </div>
-          <p class="card-impact">Built the foundational equity dataset powering downstream research and reporting tools.</p>
+          <p class="card-impact">Built the master equity dataset feeding all downstream systems.</p>
+          <div class="card-links">
+            <a href="https://www.screener.in" class="link-chip" target="_blank" rel="noopener">Data — Screener.in</a>
+            <a href="https://github.com/MohammedLike/Research-Report-Automation" class="link-chip" target="_blank" rel="noopener">Used in Report Automation</a>
+          </div>
         </article>
 
         <!-- Project 7 -->
         <article class="project-card reveal" data-category="research">
           <div class="card-top">
             <span class="card-num">07</span>
-            <span class="card-tag tag-research">Research</span>
+            <span class="card-tag tag-research">Competitive Intel</span>
           </div>
-          <h3>FinTech Platform Research &amp; Competitive Analysis</h3>
+          <p class="card-label">Project Title</p>
+          <h3>FinTech Platform Research &amp; Competitive Landscape Analysis</h3>
           <ul>
-            <li>Researched Tradeomat, Finstocks, and other FinTech platforms</li>
-            <li>Studied product features, strategy builders, backtesting systems, and user workflows</li>
-            <li>Created competitive intelligence reports for future projects</li>
+            <li>Deep-dive on Tradeomat, Finstocks, and competing strategy-builder platforms</li>
+            <li>Feature matrix: backtesting, execution, UX, pricing, strategy marketplace</li>
+            <li>Structured intelligence reports informing Stockwiz product roadmap</li>
           </ul>
           <div class="card-tech">
             <span>Competitive Intel</span><span>Product Research</span><span>Documentation</span>
           </div>
-          <p class="card-impact">Informed product roadmap decisions with structured competitive landscape analysis.</p>
+          <p class="card-impact">Directed platform strategy with evidence-based competitive analysis.</p>
+          <div class="card-links">
+            <a href="https://www.tradeomat.com" class="link-chip" target="_blank" rel="noopener">Tradeomat</a>
+            <a href="https://finstocks.ai" class="link-chip" target="_blank" rel="noopener">Finstocks.ai</a>
+          </div>
         </article>
 
         <!-- Project 8 -->
         <article class="project-card reveal" data-category="research">
           <div class="card-top">
             <span class="card-num">08</span>
-            <span class="card-tag tag-research">Platform Research</span>
+            <span class="card-tag tag-research">Platform Intel</span>
           </div>
-          <h3>Trading Strategy Data Collection &amp; Platform Intelligence</h3>
+          <p class="card-label">Project Title</p>
+          <h3>Streak / Zerodha Strategy Intelligence &amp; Data Ingestion</h3>
           <ul>
-            <li>Researched Streak (Zerodha ecosystem) features</li>
-            <li>Collected trading strategies and AI assistant workflows</li>
-            <li>Studied option-selling strategies and strategy-builder features</li>
-            <li>Organized strategy data for internal platform development</li>
-            <li>Dumped all data into a database for future use</li>
+            <li>209 Streak indicators catalogued with bullish/bearish build suggestions</li>
+            <li>Comprehensive platform audit: backtest biases, execution gaps, alpha decay risks</li>
+            <li>Strategy + indicator data dumped to PostgreSQL and indexed in Qdrant (5 collections)</li>
           </ul>
           <div class="card-tech">
-            <span>Streak</span><span>Zerodha</span><span>Database</span><span>Strategy Data</span>
+            <span>Streak</span><span>Zerodha</span><span>PostgreSQL</span><span>Qdrant</span><span>openpyxl</span>
           </div>
-          <p class="card-impact">Curated a reusable strategy knowledge base for internal platform development.</p>
+          <p class="card-impact">Curated the strategy knowledge base powering the AI platform.</p>
+          <div class="card-links">
+            <a href="https://www.streak.tech" class="link-chip" target="_blank" rel="noopener">Streak Platform</a>
+            <a href="https://github.com/MohammedLike/No-Code-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">Data → AI Builder</a>
+          </div>
         </article>
 
         <!-- Project 9 -->
@@ -290,38 +570,45 @@
             <span class="card-num">09</span>
             <span class="card-tag tag-trading">Derivatives</span>
           </div>
-          <h3>Options Selling Strategy Research</h3>
+          <p class="card-label">Project Title</p>
+          <h3>Options Selling Strategy Research Library</h3>
           <ul>
-            <li>Collected options-selling strategies from multiple marketplaces and sources</li>
-            <li>Studied Short Straddle, Short Strangle, Iron Condor, Iron Butterfly, Broken Wing Butterfly, Jade Lizard, Credit Spreads, Calendar Spreads, and Ratio Spreads</li>
-            <li>Documented risk management and strategy structures</li>
+            <li>Catalogued Short Straddle, Strangle, Iron Condor, Butterfly, Jade Lizard, credit/calendar/ratio spreads</li>
+            <li>Risk management frameworks and payoff structure documentation</li>
+            <li>Imported into options_strategies DB with Qdrant embeddings for semantic retrieval</li>
           </ul>
           <div class="card-tech">
-            <span>Options</span><span>Risk Management</span><span>Documentation</span>
+            <span>Options</span><span>Risk Management</span><span>Qdrant</span><span>PostgreSQL</span>
           </div>
-          <p class="card-impact">Created a comprehensive options strategy reference library for the team.</p>
+          <p class="card-impact">Built a searchable options strategy reference for the quant platform.</p>
+          <div class="card-links">
+            <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">Integrated in Stryke X</a>
+          </div>
         </article>
 
-        <!-- Project 10 -->
-        <article class="project-card reveal" data-category="ai">
+        <!-- Project 10 — FLAGSHIP -->
+        <article class="project-card project-card--flagship reveal" data-category="ai flagship">
           <div class="card-top">
             <span class="card-num">10</span>
-            <span class="card-tag tag-ai">AI Platform</span>
+            <span class="card-tag tag-flagship">★ Flagship · AI Platform</span>
           </div>
-          <h3>AI-Based MCP Local LLM Model Builder Prototype</h3>
+          <p class="card-label">Primary Deliverable — AI / LLM / MCP</p>
+          <h3>Stryke X — RAG + LLM + MCP Quant Research Platform</h3>
           <ul>
-            <li>Built an AI-based strategy generation platform using local LLMs through Ollama</li>
-            <li>Implemented RAG architecture with Qdrant vector database</li>
-            <li>Built MCP/LCP server integrations</li>
-            <li>Used PostgreSQL, Redis, schedulers, and APIs</li>
-            <li>Added prompt-based Pine Script generation feature</li>
-            <li>Ingested OHLC, strategy, and options strategy data</li>
-            <li>Enabled natural-language backtesting strategy creation</li>
+            <li><strong>Company's strategic R&amp;D platform</strong> — full AI quant operating system</li>
+            <li>7-service Docker stack: TimescaleDB, Redis, Qdrant, Ollama, FastAPI, React UI</li>
+            <li>MCP tool server · VectorBT backtesting · 310+ client Pine Script pipeline · RAG over 5 collections</li>
+            <li>Phase 1 AI Strategy Builder: Strategy DSL + semantic search + ~1,800 ingested records</li>
           </ul>
           <div class="card-tech">
-            <span>Ollama</span><span>RAG</span><span>MCP</span><span>Qdrant</span><span>PostgreSQL</span><span>Redis</span>
+            <span>Ollama</span><span>RAG</span><span>MCP</span><span>VectorBT</span><span>Qdrant</span><span>LangChain</span>
           </div>
-          <p class="card-impact">Pioneered natural-language strategy creation — a key differentiator for the platform.</p>
+          <p class="card-impact">The technical moat — natural-language strategy creation with institutional backtesting.</p>
+          <div class="card-links">
+            <a href="#flagship-ai" class="link-chip link-chip--primary">Deep Dive</a>
+            <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">GitHub — Stryke X</a>
+            <a href="https://github.com/MohammedLike/No-Code-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">GitHub — AI Builder</a>
+          </div>
         </article>
 
         <!-- Project 11 -->
@@ -330,18 +617,21 @@
             <span class="card-num">11</span>
             <span class="card-tag tag-quant">Validation</span>
           </div>
-          <h3>Backtesting &amp; P&amp;L Validation</h3>
+          <p class="card-label">Project Title</p>
+          <h3>Cross-Platform Backtesting &amp; P&amp;L Validation</h3>
           <ul>
-            <li>Conducted backtesting on Quantman and internal strategy builders</li>
-            <li>Compared P&amp;L reports across platforms</li>
-            <li>Evaluated strategy performance</li>
-            <li>Saved and analyzed backtesting datasets</li>
-            <li>Validated strategy outputs and reporting accuracy</li>
+            <li>Backtested strategies on Quantman, Streak, and internal VectorBT engine</li>
+            <li>Cross-platform P&amp;L comparison and slippage bias analysis</li>
+            <li>Validated strategy outputs, trade logs, and reporting accuracy</li>
           </ul>
           <div class="card-tech">
-            <span>Quantman</span><span>Backtesting</span><span>P&amp;L Analysis</span>
+            <span>Quantman</span><span>VectorBT</span><span>P&amp;L Analysis</span><span>TA-Lib</span>
           </div>
-          <p class="card-impact">Ensured cross-platform strategy reliability through rigorous P&amp;L validation.</p>
+          <p class="card-impact">Ensured strategy reliability through rigorous multi-platform validation.</p>
+          <div class="card-links">
+            <a href="https://quantman.trade" class="link-chip" target="_blank" rel="noopener">Quantman</a>
+            <a href="https://github.com/MohammedLike/RAG-LLM-MCP-Strategy-Builder" class="link-chip" target="_blank" rel="noopener">Internal Engine</a>
+          </div>
         </article>
 
         <!-- Project 12 -->
@@ -350,18 +640,20 @@
             <span class="card-num">12</span>
             <span class="card-tag tag-research">Product Design</span>
           </div>
-          <h3>Scalping Mode Research &amp; Builder Feature Design</h3>
+          <p class="card-label">Project Title</p>
+          <h3>StrykeX Scalper Mode — Research &amp; Prototype</h3>
           <ul>
-            <li>Researched scalping strategies and methodologies</li>
-            <li>Studied short-term trading indicators</li>
-            <li>Evaluated indicator combinations for scalping</li>
-            <li>Designed requirements for a dedicated Scalping Mode in the strategy builder</li>
-            <li>Proposed feature enhancements and implementation approaches</li>
+            <li>Streamlit prototype: guided template → builder → day-level backtest workflow</li>
+            <li>Plotly trade charts, confluence signals, opinionated low-overload UX</li>
+            <li>Product requirements doc for dedicated Scalping Mode in strategy builder</li>
           </ul>
           <div class="card-tech">
-            <span>Scalping</span><span>Product Design</span><span>UX Research</span>
+            <span>Streamlit</span><span>Plotly</span><span>Backtesting</span><span>Product Design</span>
           </div>
-          <p class="card-impact">Defined product requirements for a new high-frequency trading mode in the platform.</p>
+          <p class="card-impact">Delivered working prototype + PRD for a new high-frequency trading mode.</p>
+          <div class="card-links">
+            <a href="https://github.com/MohammedLike/Scalping-Mode" class="link-chip" target="_blank" rel="noopener">GitHub Repo</a>
+          </div>
         </article>
 
       </div>
@@ -376,43 +668,80 @@
         <div>
           <span class="section-tag">Capabilities</span>
           <h2>Skills &amp; Technologies</h2>
+          <p class="section-sub">Technologies used across all 12 internship projects — from quant research notebooks to full-stack AI platforms.</p>
         </div>
       </div>
       <div class="skills-grid reveal">
         <div class="skill-group">
           <h3>Languages</h3>
           <div class="skill-chips">
-            <span>Python</span><span>JavaScript</span><span>Pine Script</span><span>SQL</span><span>HTML / CSS</span>
+            <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>Pine Script</span><span>HTML / CSS</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>Data &amp; ML</h3>
+          <h3>Data &amp; Analytics</h3>
           <div class="skill-chips">
-            <span>Jupyter</span><span>Pandas</span><span>RAG</span><span>Sentiment Analysis</span><span>Qdrant</span><span>Vector DB</span>
+            <span>Pandas</span><span>NumPy</span><span>Polars</span><span>PyArrow</span><span>SciPy</span><span>statsmodels</span><span>scikit-learn</span><span>XGBoost</span><span>LightGBM</span><span>hmmlearn</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>Infrastructure</h3>
+          <h3>Visualization</h3>
           <div class="skill-chips">
-            <span>PostgreSQL</span><span>Redis</span><span>Ollama</span><span>MCP Servers</span><span>Schedulers</span><span>REST APIs</span>
+            <span>Matplotlib</span><span>Seaborn</span><span>Plotly</span><span>Recharts</span><span>mplfinance</span><span>Lightweight Charts</span><span>Framer Motion</span><span>Three.js</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>Finance &amp; Trading</h3>
+          <h3>Backend &amp; APIs</h3>
           <div class="skill-chips">
-            <span>Technical Indicators</span><span>Options Strategies</span><span>Backtesting</span><span>KPI Analysis</span><span>Market Data</span>
+            <span>FastAPI</span><span>Uvicorn</span><span>Pydantic</span><span>Typer</span><span>REST APIs</span><span>SSE</span><span>WebSockets</span><span>httpx</span><span>aiohttp</span><span>APScheduler</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>Tools &amp; Platforms</h3>
+          <h3>Databases &amp; Storage</h3>
           <div class="skill-chips">
-            <span>TradingView</span><span>Quantman</span><span>Screener</span><span>Streak / Zerodha</span><span>React</span>
+            <span>PostgreSQL</span><span>TimescaleDB</span><span>SQLAlchemy</span><span>psycopg2</span><span>asyncpg</span><span>Alembic</span><span>Redis</span><span>Qdrant</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>AI / ML &amp; LLM</h3>
+          <div class="skill-chips">
+            <span>RAG</span><span>LangChain</span><span>LangGraph</span><span>Ollama</span><span>fastembed</span><span>sentence-transformers</span><span>MCP</span><span>OpenAI API</span><span>Anthropic API</span><span>Gemini</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Frontend &amp; UI</h3>
+          <div class="skill-chips">
+            <span>React</span><span>Vite</span><span>React Router</span><span>Tailwind CSS</span><span>Zustand</span><span>Streamlit</span><span>Vanilla JS</span><span>Lucide Icons</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>PDF &amp; Report Generation</h3>
+          <div class="skill-chips">
+            <span>Playwright</span><span>WeasyPrint</span><span>ReportLab</span><span>xhtml2pdf</span><span>Jinja2</span><span>jsPDF</span><span>html2canvas</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Trading &amp; Quant</h3>
+          <div class="skill-chips">
+            <span>TA-Lib</span><span>pandas-ta</span><span>VectorBT</span><span>py-vollib</span><span>yfinance</span><span>Backtesting</span><span>Options Strategies</span><span>Technical Indicators</span><span>Strategy DSL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>DevOps &amp; Tooling</h3>
+          <div class="skill-chips">
+            <span>Docker</span><span>Docker Compose</span><span>pytest</span><span>ruff</span><span>Git</span><span>python-dotenv</span><span>Jupyter</span><span>openpyxl</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Platforms &amp; Data Sources</h3>
+          <div class="skill-chips">
+            <span>TradingView</span><span>Quantman</span><span>Streak / Zerodha</span><span>Screener.in</span><span>NSE / BSE</span><span>QuestDB</span>
           </div>
         </div>
         <div class="skill-group">
           <h3>Domains</h3>
           <div class="skill-chips">
-            <span>Competitive Intel</span><span>Product Research</span><span>Report Automation</span><span>Web Scraping</span>
+            <span>EDA &amp; KPI Analysis</span><span>Report Automation</span><span>Web Scraping</span><span>Competitive Intel</span><span>Product Research</span><span>Sentiment Analysis</span><span>Market Intelligence</span>
           </div>
         </div>
       </div>
@@ -427,32 +756,45 @@
         <div>
           <span class="section-tag">Outcomes</span>
           <h2>Key Impact Metrics</h2>
+          <p class="section-sub">All figures verified from project databases, asset libraries, and codebase counts.</p>
         </div>
       </div>
       <div class="impact-grid reveal">
         <div class="impact-card">
-          <div class="impact-value">2,370+</div>
-          <div class="impact-label">Stocks in Automated Reporting</div>
+          <div class="impact-value">2,370</div>
+          <div class="impact-label">Company Profiles in Report DB</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">3,498</div>
+          <div class="impact-label">Logos in Local Asset Library</div>
         </div>
         <div class="impact-card">
           <div class="impact-value">3,370</div>
-          <div class="impact-label">Stocks Scraped &amp; Structured</div>
+          <div class="impact-label">Stocks Scraped from Screener</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">~1,800</div>
+          <div class="impact-label">Strategies in AI Builder DB</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">212</div>
+          <div class="impact-label">Indicators Tested &amp; Validated</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">310+</div>
+          <div class="impact-label">Client Pine Script Requests</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">5</div>
+          <div class="impact-label">Qdrant Vector Collections</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-value">&lt;60s</div>
+          <div class="impact-label">Per-Stock PDF Generation</div>
         </div>
         <div class="impact-card">
           <div class="impact-value">12</div>
-          <div class="impact-label">Major Project Areas</div>
-        </div>
-        <div class="impact-card">
-          <div class="impact-value">AI/RAG</div>
-          <div class="impact-label">Local LLM Prototype</div>
-        </div>
-        <div class="impact-card">
-          <div class="impact-value">Full-Stack</div>
-          <div class="impact-label">Report Automation Platform</div>
-        </div>
-        <div class="impact-card">
-          <div class="impact-value">Daily</div>
-          <div class="impact-label">Market Intelligence Reports</div>
+          <div class="impact-label">Major Project Deliverables</div>
         </div>
       </div>
     </div>
@@ -484,11 +826,11 @@
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-phase">Phase 2 · Analysis &amp; Development</span>
-            <h3>Core Deliverables</h3>
-            <p>Nifty Pharma KPI analysis, Pine Script strategy development, automated report generation platform, and daily market snapshot web page.</p>
+            <span class="timeline-phase">Phase 2 · Core Production Systems</span>
+            <h3>Flagship Deliverables Shipped</h3>
+            <p>Built and deployed the <strong>Research Report Automation System</strong> (2,370 stocks, Playwright PDFs) and began the <strong>Stryke X RAG + LLM + MCP platform</strong> — alongside Nifty Pharma analysis, indicator testing, and market snapshot dashboard.</p>
             <div class="timeline-tags">
-              <span>#1 Nifty Pharma</span><span>#2 Pine Script</span><span>#5 Report Automation</span><span>#4 Market Snapshot</span>
+              <span>★ Report Automation</span><span>★ Stryke X AI</span><span>#1 Nifty Pharma</span><span>#4 Market Snapshot</span>
             </div>
           </div>
         </div>
@@ -497,9 +839,9 @@
           <div class="timeline-content">
             <span class="timeline-phase">Phase 3 · AI &amp; Advanced Systems</span>
             <h3>Innovation &amp; Validation</h3>
-            <p>AI Catalyst Engine research, local LLM/RAG prototype with MCP integrations, backtesting P&amp;L validation, and scalping mode feature design.</p>
+            <p>Expanded Stryke X with VectorBT backtesting, 310+ client Pine pipeline, Qdrant RAG (5 collections), MCP tool server, scalping mode prototype, and cross-platform P&amp;L validation.</p>
             <div class="timeline-tags">
-              <span>#3 Catalyst Engine</span><span>#10 AI/RAG Prototype</span><span>#11 Backtesting</span><span>#12 Scalping Mode</span>
+              <span>★ LLM + MCP</span><span>★ Client Pine Pipeline</span><span>#11 Backtesting</span><span>#12 Scalping Mode</span>
             </div>
           </div>
         </div>
@@ -513,7 +855,7 @@
       <div class="footer-left">
         <p class="footer-title">Mohammed Like</p>
         <p>Internship Portfolio Report</p>
-        <p><strong>Stockwiz Technologies LLP</strong> · June 2025</p>
+        <p><strong>Stockwiz Technologies LLP</strong> · June 2026</p>
       </div>
       <div class="footer-right">
         <a href="#hero" class="footer-link">Back to top</a>
